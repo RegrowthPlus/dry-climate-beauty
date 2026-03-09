@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gulfhealthscience.org/sitemap-index.xml
+Sitemap: https://dryclimatebeauty.com/sitemap-index.xml
