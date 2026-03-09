@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-An Astro-based blog site in the Regrowth+ content network. Deployed on Cloudflare Pages with auto-deploy from this GitHub repo. Articles are published daily by the Blog Factory pipeline (separate repo: `contextarchitect/regrowth-blog-factory`).
+Dry Climate Beauty (dryclimatebeauty.com) — an Astro-based blog site in the Regrowth+ content network. Healthline variant. Deployed on Cloudflare Pages with auto-deploy from this GitHub repo. Articles are published daily by the Blog Factory pipeline (separate repo: `contextarchitect/regrowth-blog-factory`, platform ID: `blog_007`).
 
 ## Owner
 
@@ -12,12 +12,12 @@ Hilal Kanafani (@contextarchitect). Dubai-based.
 
 ## Key Files
 
-- `site.config.ts` - **THE** config file. Site name, domain, variant (healthline/wirecutter), colors, categories. This is the ONLY file that changes between sites.
-- `src/data/authors.json` - Author personas (name, bio, credentials, photo path)
-- `src/data/categories.json` - Content categories (name, slug, description, intro paragraph)
+- `site.config.ts` - Site name, domain, variant (healthline), colors, categories.
+- `src/data/authors.json` - 4 author personas (Emma Calloway, Dr. Layla Hassan, Nadia Serhan, Priya Mehta)
+- `src/data/categories.json` - 6 content categories
 - `src/content/articles/` - Markdown articles with Zod-validated frontmatter
 - `src/content/config.ts` - Frontmatter schema definition
-- `src/styles/global.css` - CSS custom properties for both variants
+- `src/styles/global.css` - CSS custom properties
 
 ## Commands
 
@@ -28,88 +28,110 @@ npm run build            # Production build (static output for Cloudflare Pages)
 npm run preview          # Preview production build locally
 ```
 
-## Template Variants
+## CRITICAL: Data Format Constraints
 
-This template supports two visual variants controlled by `site.config.ts`:
+These constraints are enforced by the Zod schema and Astro template code. Violations cause Cloudflare build failures. **Always validate before pushing.**
 
-- **`"healthline"`** - Warm, trust-heavy editorial (teal accent, DM Serif Display + Inter/DM Sans, rounded cards, medical review boxes, Key Takeaways)
-- **`"wirecutter"`** - Clean newspaper editorial (navy + brass, Playfair Display + Source Sans 3, square cards, product callout boxes, comparison tables)
+### Article Frontmatter Limits (Zod schema in `src/content/config.ts`)
 
-Switching variants: change `variant` in `site.config.ts`. CSS custom properties on `:root[data-variant]` handle all color/font/spacing differences. Components with structural differences use conditional rendering.
+| Field | Constraint | What happens if violated |
+|-------|-----------|--------------------------|
+| `title` | **Max 70 characters** | Build fails: `InvalidContentEntryDataError` |
+| `description` | **Max 160 characters** | Build fails: `InvalidContentEntryDataError` |
+| `category` | Must match a slug in `categories.json` | Article won't render on category pages |
+| `author` | Must match a key in `authors.json` | Author page 404s |
+| `publishedDate` | Must be a valid date (YYYY-MM-DD) | Build fails |
+| `heroImage` | Path must have a corresponding file in `public/` | Broken image on page |
 
-## Image Generation (IMPORTANT)
+**Before pushing any article**, count the title and description characters. A title of 71 characters will break the entire site build.
 
-**When building or configuring a new blog site, ALWAYS generate real images. Never leave placeholder paths without actual files.**
+### categories.json Format (MUST be an array, NOT an object)
 
-The Blog Factory repo (`contextarchitect/regrowth-blog-factory`) has an image generation script that uses the Kie.ai API (Nano Banana 2 model). The `KIE_API_KEY` environment variable is already set on the VPS.
+The template's components call `categories.find(c => c.slug === slug)` which requires an **array of objects**. Using an object keyed by slug will cause `categories.find is not a function` build errors.
 
-### How to generate images
+**Correct format:**
+```json
+[
+  {
+    "name": "Hair & Scalp",
+    "slug": "hair-scalp",
+    "description": "...",
+    "intro": "..."
+  }
+]
+```
 
-From the Blog Factory repo directory:
+### authors.json Format (MUST be an object keyed by slug)
+
+The template's `getStaticPaths()` calls `Object.entries(authors)` which requires an **object keyed by author slug**. This is the opposite of categories.json.
+
+### Pre-Push Validation Checklist
+
+Before pushing content to this repo, verify:
+
+- [ ] All article titles are **70 characters or fewer**
+- [ ] All article descriptions are **160 characters or fewer**
+- [ ] `categories.json` is an **array** (starts with `[`, not `{`)
+- [ ] `authors.json` is an **object keyed by slug** (starts with `{`)
+- [ ] Every `heroImage` path in frontmatter has a corresponding file in `public/images/articles/`
+- [ ] Every `author` slug in frontmatter has a matching key in `authors.json`
+- [ ] Every `category` slug in frontmatter has a matching `slug` field in `categories.json`
+- [ ] Run `npm run build` locally before pushing if making structural changes
+
+## DCB-Specific: Editorial Voice
+
+- Healthline variant: warm, empathetic, medically reviewed
+- Second-person empathetic: "If you've noticed...", "What you can do..."
+- Key Takeaways box mandatory on every article
+- Medical reviewer: Dr. Layla Hassan (on all YMYL/health articles)
+- Hedge language: "may", "research suggests", "some studies show"
+- Author rotation: Emma Calloway (primary), Nadia Serhan (motherhood), Priya Mehta (nutrition)
+- Geographic scope broader than GCC (also Arizona, Australia, Spain, California)
+
+## Image Generation
+
+The Blog Factory repo (`contextarchitect/regrowth-blog-factory`) has an image generation script. The `KIE_API_KEY` is set on the VPS. **Always prefer batch mode** for generating multiple images concurrently.
 
 ```bash
 cd ~/regrowth-blog-factory
 export PYTHONPATH=$(pwd)/src:$PYTHONPATH
 
-# Author headshot (provide physical description, prompt is auto-generated)
-python3 -m scripts.generate_site_images headshot \
-  --name "Author Name" \
-  --description "Male, mid 30s, short dark hair, clean-shaven, professional, wearing navy sweater" \
-  --output ~/this-site-repo/public/images/authors/author-slug.webp
-
-# Homepage hero background
-python3 -m scripts.generate_site_images hero \
-  --prompt "VISIBLE LAYER:\nYour three-layer prompt here..." \
-  --ratio 21:9 \
-  --output ~/this-site-repo/public/images/site/hero-bg.webp
-
-# Batch mode (most efficient - generate everything at once)
+# Batch mode (concurrent - generates all images at once)
 python3 -m scripts.generate_site_images batch \
   --manifest ~/image-manifest.json \
-  --output-dir ~/this-site-repo/
+  --output-dir ~/dry-climate-beauty/
+
+# Single headshot
+python3 -m scripts.generate_site_images headshot \
+  --name "Author Name" \
+  --description "Physical description" \
+  --output ~/dry-climate-beauty/public/images/authors/slug.webp
+
+# Single custom image
+python3 -m scripts.generate_site_images custom \
+  --prompt "Prompt text" \
+  --ratio 1:1 \
+  --output ~/dry-climate-beauty/public/images/categories/slug.webp
 ```
-
-### What images a site needs
-
-| Image | Path | Aspect Ratio | How to Generate |
-|-------|------|-------------|-----------------|
-| Author headshots | `public/images/authors/{slug}.webp` | 1:1 | `headshot` command with physical description |
-| Homepage hero | `public/images/site/hero-bg.webp` | 21:9 | `hero` command with full Three-Layer prompt |
-| Category icons | `public/images/categories/{slug}.webp` | 1:1 | `custom` type in batch manifest |
-| Article hero images | `public/images/articles/{slug}-hero.webp` | 16:9 (WC) or 3:2 (HL) | `hero` command or `custom` in batch |
-
-### Batch manifest format
-
-```json
-{
-  "images": [
-    {"type": "headshot", "name": "Author Name", "description": "Physical desc", "output": "public/images/authors/slug.webp"},
-    {"type": "hero", "prompt": "Full prompt...", "ratio": "21:9", "resolution": "2K", "output": "public/images/site/hero.webp"},
-    {"type": "custom", "prompt": "Icon prompt...", "ratio": "1:1", "resolution": "1K", "output": "public/images/categories/slug.webp"}
-  ]
-}
-```
-
-### Headshot descriptions
-
-When generating headshots, describe the person naturally. The script wraps your description in a Three-Layer Constraint Framework prompt optimized for editorial author photos. Include: gender, approximate age, ethnicity/complexion, hair style, facial hair, expression, and clothing.
 
 ## Article Frontmatter Schema
 
-Required fields for pipeline-published articles:
 ```yaml
 ---
-title: "Article Title" # max 70 chars
-description: "Meta description" # max 160 chars
-category: "category-slug"
-author: "author-slug"
+title: "Article Title"       # STRICT MAX: 70 characters
+description: "Meta desc"     # STRICT MAX: 160 characters
+category: "category-slug"    # Must match categories.json
+author: "author-slug"        # Must match authors.json
+reviewedBy: "dr-layla-hassan"  # Required on all YMYL articles
 publishedDate: 2026-03-07
 heroImage: "/images/articles/slug-hero.webp"
 heroAlt: "Descriptive alt text"
+readingTime: 7
+tags: ["tag1", "tag2"]
+featured: false
+hasAffiliateLinks: false
 ---
 ```
-
-Optional fields: `updatedDate`, `reviewedBy`, `readingTime`, `tags`, `featured`, `draft`, `titleTag`, `canonicalUrl`, `noindex`, `hasAffiliateLinks`, `faqItems`
 
 ## Content Rules
 
@@ -118,22 +140,20 @@ Optional fields: `updatedDate`, `reviewedBy`, `readingTime`, `tags`, `featured`,
 - Use contractions naturally
 - Paragraph max: 4 sentences (most 2-3)
 - Open with the problem within first 3 sentences
-- NEVER name specific GCC cities or countries — use "the GCC", "the Gulf", "the region"
+- NEVER name specific GCC cities or countries
 - Environmental angle (water, climate, heat) in every article
-- FTC disclosure at top of articles with affiliate links
 - Regrowth+ mentioned as one option among many, never exclusively promoted
 
 ## Network Context
 
-This site is part of a multi-blog network. Network docs live in `contextarchitect/regrowth-blog-factory`:
-- `docs/NETWORK-REGISTRY.md` - All platforms, their purposes, and keyword themes
+Network docs in `contextarchitect/regrowth-blog-factory`:
+- `docs/NETWORK-REGISTRY.md` - All platforms
 - `docs/PLATFORM-BRANDING.md` - Full branding specs per site
-- `docs/CONTENT-LOG.md` - All published articles across all sites (check for overlap before adding topics)
+- `docs/CONTENT-LOG.md` - All published articles (check for overlap)
+- `docs/DCB_Keyword_Schedule.md` - DCB 30-day editorial calendar
 
 ## Deployment
 
-- Cloudflare Pages (static output, auto-deploy from GitHub main branch)
-- DNS: CNAME to Cloudflare Pages domain
-- SSL: Auto-provisioned by Cloudflare
+- Cloudflare Pages (auto-deploy from main branch)
 - Build command: `npm run build`
 - Output directory: `dist`
