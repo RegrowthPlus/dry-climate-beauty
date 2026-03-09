@@ -42,11 +42,11 @@ Some performed brilliantly. Some melted, oxidised, or separated within hours. He
 
 Gel and gel-cream textures were the clear winners for daily moisturising. They absorb quickly, don't leave an occlusive film that traps sweat, and tend to be more stable at high temperatures than heavy creams.
 
-The formulas that worked best combined hyaluronic acid with lightweight plant-derived squalane. This combination provides hydration without the heaviness that makes rich creams uncomfortable in heat.
+The formulas that worked best combined [hyaluronic acid with lightweight plant-derived squalane](https://www.healthline.com/health/beauty-skin-care/squalane-for-skin). This combination provides hydration without the heaviness that makes rich creams uncomfortable in heat.
 
 ### Mineral Sunscreens (With Caveats)
 
-Mineral sunscreens using zinc oxide and titanium dioxide were more stable than chemical filters in testing. They didn't degrade as quickly in extreme UV, and they didn't sting when sweat ran into my eyes, which is a real consideration when you're dealing with Gulf temperatures.
+[Mineral sunscreens](https://www.aad.org/public/everyday-care/sun-protection/sunscreen/how-to-select-sunscreen) using zinc oxide and titanium dioxide were more stable than chemical filters in testing. They didn't degrade as quickly in extreme UV, and they didn't sting when sweat ran into my eyes, which is a real consideration when you're dealing with Gulf temperatures.
 
 The caveat: traditional mineral formulas leave a white cast that's unacceptable for many skin tones. The newer micronised and tinted mineral formulas from clean beauty brands have largely solved this, though they cost more.
 
@@ -66,18 +66,18 @@ Natural lip colours and cream blushes using beeswax, candelilla, or carnauba as 
 
 ### Bar Cleansers
 
-Clean beauty bar cleansers (typically saponified plant oils) reacted aggressively with hard water. The mineral-soap interaction produced the residue problem described in our skin barrier article, and these cleansers left more film than liquid surfactant alternatives.
+Clean beauty bar cleansers (typically saponified plant oils) reacted aggressively with hard water. The mineral-soap interaction produced the residue problem described in our [skin barrier article](/skin-body/hard-water-skin-barrier-moisturiser/), and these cleansers left more film than liquid surfactant alternatives.
 
 ## The Ingredient Reality Check
 
 "Clean" and "effective in harsh conditions" are independent variables. A product can be both, either, or neither. When selecting clean beauty products for hard water and extreme heat environments, prioritise based on texture and formula stability rather than marketing claims.
 
-Look for water-based over oil-based formulas for daytime use. Check that sunscreen actives are mineral rather than chemical if possible. Choose preservative systems that are stable at high temperatures (some natural preservatives degrade in heat faster than synthetic alternatives, which can be a real safety concern).
+If you're also [supplementing for Gulf conditions](/nutrition-supplements/supplements-women-gulf-conditions/), omega-3s can support your skin barrier from the inside. Look for water-based over oil-based formulas for daytime use. Check that sunscreen actives are mineral rather than chemical if possible. Choose preservative systems that are [stable at high temperatures](https://www.fda.gov/cosmetics/cosmetics-guidance-regulation/cosmetics-safety-qa-preservatives) (some natural preservatives degrade in heat faster than synthetic alternatives, which can be a real safety concern).
 
-And don't assume that a product designed for European or North American markets will perform the same way in Gulf conditions. The climate difference is not minor.
+And don't assume that a product designed for European or North American markets will perform the same way in Gulf conditions. If your hair is also struggling, the [curly girl method modifications](/hair-scalp/curly-girl-method-hard-water/) apply the same climate-first thinking to hair care. The climate difference is not minor.
 
 ## References
 
-1. Burnett ME, Wang SQ. Current sunscreen controversies: a critical review. Photodermatol Photoimmunol Photomed. 2011;27(2):58-67.
-2. Draelos ZD. The science behind skin care: moisturizers. J Cosmet Dermatol. 2018;17(2):138-144.
-3. Loden M. Role of topical emollients and moisturizers in the treatment of dry skin barrier disorders. Am J Clin Dermatol. 2003;4(11):771-788.
+1. Burnett ME, Wang SQ. [Current sunscreen controversies: a critical review](https://pubmed.ncbi.nlm.nih.gov/21392107/). Photodermatol Photoimmunol Photomed. 2011;27(2):58-67.
+2. Draelos ZD. [The science behind skin care: moisturizers](https://pubmed.ncbi.nlm.nih.gov/29359541/). J Cosmet Dermatol. 2018;17(2):138-144.
+3. Loden M. [Role of topical emollients and moisturizers in the treatment of dry skin barrier disorders](https://pubmed.ncbi.nlm.nih.gov/14572299/). Am J Clin Dermatol. 2003;4(11):771-788.

@@ -35,7 +35,7 @@ You didn't do anything wrong. Your environment changed, and your hair is respond
 
 The first thing most women notice isn't hair loss. It's texture change. Hair that was soft becomes straw-like. Curls that held their pattern start falling flat or frizzing unpredictably. Colour-treated hair fades faster than it should.
 
-This is the earliest sign of mineral buildup from hard water. Calcium and magnesium ions in the water bond to the hair shaft during every wash, creating a film that makes hair feel rough, heavy, and resistant to styling products. Your shampoo and conditioner aren't suddenly defective. They're working against a mineral barrier that didn't exist before you moved.
+This is the earliest sign of [mineral buildup from hard water](https://pubmed.ncbi.nlm.nih.gov/24688579/). Calcium and magnesium ions in the water bond to the hair shaft during every wash, creating a film that makes hair feel rough, heavy, and resistant to styling products. Your shampoo and conditioner aren't suddenly defective. They're working against a mineral barrier that didn't exist before you moved.
 
 What you can do: Switch to a chelating or clarifying shampoo once a week. This won't prevent buildup entirely, but it slows the accumulation. Look for ingredients like EDTA or citric acid on the label.
 
@@ -51,13 +51,13 @@ What you can do: Reduce wash frequency if you can. Use a leave-in conditioner or
 
 This is the phase that alarms most women. Somewhere between month three and month six, hair shedding increases noticeably. You find more hair in the shower drain, on your brush, on your pillow. It's diffuse, meaning it's not concentrated in one spot. It's coming from everywhere.
 
-What's likely happening is telogen effluvium, a temporary increase in hair shedding triggered by physiological stress. Relocation stress, climate adjustment, sleep disruption, dietary changes, and even vitamin D fluctuations (counterintuitively common in sunny climates where people spend most of their time indoors or covered) can all push hair follicles from the growth phase into the resting phase prematurely.
+What's likely happening is [telogen effluvium](https://www.mayoclinic.org/hair-loss/expert-answers/faq-20057409), a temporary increase in hair shedding triggered by physiological stress. Relocation stress, climate adjustment, sleep disruption, dietary changes, and even [vitamin D fluctuations](/nutrition-supplements/vitamin-d-deficiency-sun-climate/) (counterintuitively common in sunny climates where people spend most of their time indoors or covered) can all push hair follicles from the growth phase into the resting phase prematurely.
 
 The hard water factor makes this worse. Mineral buildup weakens the hair shaft, so hairs that are already in the resting phase break more easily. You're losing more hair and the remaining hair is more fragile.
 
 *Medically reviewed note: Telogen effluvium is typically self-limiting and resolves within 6 to 9 months once the triggering stressors stabilise. However, if shedding is concentrated in a specific pattern (temples, crown, part line) rather than diffuse, this may indicate a different condition and should be evaluated by a dermatologist or trichologist.*
 
-What you can do: Don't panic, but do take it seriously. Get blood work done (iron, ferritin, vitamin D, thyroid panel). Start a chelating treatment if you haven't already. Be gentle with your hair during this phase.
+What you can do: Don't panic, but do take it seriously. Get blood work done (iron, ferritin, vitamin D, thyroid panel). [Targeted supplementation](/nutrition-supplements/supplements-women-gulf-conditions/) can help if deficiencies are confirmed. Start a chelating treatment if you haven't already. Be gentle with your hair during this phase.
 
 ## Month 6 to 9: The Plateau
 
@@ -73,7 +73,7 @@ What you can do: This is a good time to establish your long-term routine. The pr
 
 By the end of the first year, you should have a clear picture of your new baseline. Your hair isn't going to behave the way it did before the move, and expecting it to will only frustrate you. But with the right routine, it can be healthy, manageable, and genuinely good.
 
-Women who struggle beyond the 12-month mark typically fall into one of two categories: either there's an underlying condition that the relocation unmasked (hormonal, nutritional, or genetic), or the hard water damage has been compounding without adequate chelation treatment.
+Women who struggle beyond the 12-month mark typically fall into one of two categories: either there's an underlying condition that the relocation unmasked (hormonal, nutritional, or genetic), or the [hard water damage has been compounding](/skin-body/hard-water-skin-barrier-moisturiser/) without adequate chelation treatment.
 
 What you can do: If you're still experiencing significant shedding or your hair hasn't stabilised, get a professional assessment. A trichologist can distinguish between environmental damage and other causes. Don't assume it's "just the water" if it's been more than a year.
 
@@ -89,7 +89,7 @@ The timeline above describes the typical pattern, but everyone is different. See
 
 ## References
 
-1. Malkud S. Telogen Effluvium: A Review. J Clin Diagn Res. 2015;9(9):WE01-WE03.
-2. Evans S, et al. The effect of hard water on hair. Int J Trichology. 2013;5(3):137-139.
-3. Rushton DH. Nutritional factors and hair loss. Clin Exp Dermatol. 2002;27(5):396-404.
-4. Almohanna HM, et al. The Role of Vitamins and Minerals in Hair Loss: A Review. Dermatol Ther. 2019;9(1):51-70.
+1. Malkud S. [Telogen Effluvium: A Review](https://pubmed.ncbi.nlm.nih.gov/26500992/). J Clin Diagn Res. 2015;9(9):WE01-WE03.
+2. Evans S, et al. [The effect of hard water on hair](https://pubmed.ncbi.nlm.nih.gov/24688579/). Int J Trichology. 2013;5(3):137-139.
+3. Rushton DH. [Nutritional factors and hair loss](https://pubmed.ncbi.nlm.nih.gov/12190640/). Clin Exp Dermatol. 2002;27(5):396-404.
+4. Almohanna HM, et al. [The Role of Vitamins and Minerals in Hair Loss: A Review](https://pubmed.ncbi.nlm.nih.gov/30980598/). Dermatol Ther. 2019;9(1):51-70.

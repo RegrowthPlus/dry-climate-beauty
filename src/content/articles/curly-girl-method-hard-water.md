@@ -36,7 +36,7 @@ The Curly Girl Method's most famous rule is no sulfates. The reasoning makes sen
 
 In hard water, the equation changes completely.
 
-Mineral deposits from calcium and magnesium bind to the hair shaft with every wash. These deposits are not water-soluble. They won't come off with conditioner, co-wash, or gentle surfactants. They require either a chelating agent (like EDTA) or a sulfate-based cleanser to dissolve and remove them.
+[Mineral deposits from calcium and magnesium](https://pubmed.ncbi.nlm.nih.gov/24688579/) bind to the hair shaft with every wash. These deposits are not water-soluble. They won't come off with conditioner, co-wash, or gentle surfactants. They require either a chelating agent (like EDTA) or a sulfate-based cleanser to dissolve and remove them.
 
 If you're co-washing in hard water, you're effectively applying conditioner on top of mineral buildup every single wash. The buildup accumulates. Your curls get heavier and limper. Products stop absorbing. And because CGM tells you this is a moisture issue, you add more conditioner, which makes the problem worse.
 
@@ -48,7 +48,7 @@ CGM's second rule is no silicones. Again, the logic works in soft water. Silicon
 
 But in hard water, silicones serve a purpose that CGM doesn't account for. They create a barrier between the hair shaft and the mineral-laden water. This barrier reduces the amount of calcium and magnesium that bonds to your hair during washing.
 
-Research on silicone coatings suggests they can reduce the adhesion of environmental deposits on hair. In a hard water context, this means less mineral buildup, less brittleness, and better curl retention.
+[Research on silicone coatings](https://pubmed.ncbi.nlm.nih.gov/26171673/) suggests they can reduce the adhesion of environmental deposits on hair. In a hard water context, this means less mineral buildup, less brittleness, and better curl retention.
 
 I'm not suggesting you coat your hair in dimethicone and call it done. But the blanket silicone ban doesn't make sense when your primary hair problem is mineral deposition.
 
@@ -66,14 +66,14 @@ Consider a final rinse with filtered or bottled water on wash days. Running filt
 
 ## When Your Curl Pattern Isn't Actually Changed
 
-Many women assume their curl pattern has permanently changed after moving to a hard water area. In most cases, what's changed is the weight and texture of the mineral film on the hair, not the follicle shape itself.
+Many women assume their curl pattern has permanently changed after moving to a hard water area. This mirrors the broader [expat hair loss timeline](/hair-scalp/expat-hair-loss-timeline-first-year/) that most women experience. In most cases, what's changed is the weight and texture of the mineral film on the hair, not the follicle shape itself.
 
 A proper chelation treatment (either a chelating shampoo or a professional demineralisation treatment) often reveals that the original curl pattern is still there, buried under months of buildup.
 
-If you do a thorough chelation and your curls return, that's your answer. If they don't, the change may be related to other factors: hormonal shifts, aging, medication, or stress. But try the chelation first before assuming the worst.
+If you do a thorough chelation and your curls return, that's your answer. If they don't, the change may be related to other factors: hormonal shifts, aging, medication, or stress. [Nutritional deficiencies](/nutrition-supplements/supplements-women-gulf-conditions/) common in Gulf climates can also contribute. But try the chelation first before assuming the worst.
 
 ## References
 
-1. Evans S, et al. The effect of hard water on hair. Int J Trichology. 2013;5(3):137-139.
-2. Gavazzoni Dias MF. Hair cosmetics: an overview. Int J Trichology. 2015;7(1):2-15.
-3. Bolduc C, Shapiro J. Hair care products: waving, straightening, conditioning, and coloring. Clin Dermatol. 2001;19(4):431-436.
+1. Evans S, et al. [The effect of hard water on hair](https://pubmed.ncbi.nlm.nih.gov/24688579/). Int J Trichology. 2013;5(3):137-139.
+2. Gavazzoni Dias MF. [Hair cosmetics: an overview](https://pubmed.ncbi.nlm.nih.gov/26171673/). Int J Trichology. 2015;7(1):2-15.
+3. Bolduc C, Shapiro J. [Hair care products: waving, straightening, conditioning, and coloring](https://pubmed.ncbi.nlm.nih.gov/11493286/). Clin Dermatol. 2001;19(4):431-436.

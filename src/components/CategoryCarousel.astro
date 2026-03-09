@@ -1,12 +1,16 @@
 ---
 /**
  * "Explore by health topic" horizontal scroll cards.
- * Matches Healthline screenshot 02: portrait cards with colored top backgrounds,
+ * Matches Healthline screenshot 02: portrait cards with category icon images,
  * category name below. Horizontally scrollable on mobile.
  */
 import { siteConfig } from '../../site.config';
+import categoriesData from '../data/categories.json';
 
-const categories = siteConfig.categories;
+const categories = siteConfig.categories.map(cat => ({
+  ...cat,
+  icon: categoriesData.find(c => c.slug === cat.slug)?.icon,
+}));
 ---
 
 <section class="category-carousel">
@@ -15,10 +19,14 @@ const categories = siteConfig.categories;
       <h2>Explore by health topic</h2>
     </div>
     <div class="carousel-track">
-      {categories.map((cat, i) => (
+      {categories.map((cat) => (
         <a href={`/${cat.slug}/`} class="carousel-card">
-          <div class:list={['card-visual', `color-${i % 2 === 0 ? 'primary' : 'light'}`]}>
-            <span class="card-icon">{cat.name.charAt(0)}</span>
+          <div class="card-visual">
+            {cat.icon ? (
+              <img src={cat.icon} alt={cat.name} width="200" height="267" loading="lazy" class="card-img" />
+            ) : (
+              <span class="card-icon">{cat.name.charAt(0)}</span>
+            )}
           </div>
           <span class="card-name">{cat.name}</span>
         </a>
@@ -75,24 +83,24 @@ const categories = siteConfig.categories;
     justify-content: center;
     margin-bottom: var(--space-md);
     transition: transform 0.3s;
+    overflow: hidden;
+    background: var(--color-surface);
   }
 
   .carousel-card:hover .card-visual {
     transform: translateY(-4px);
   }
 
-  .color-primary {
-    background: var(--color-primary);
-  }
-
-  .color-light {
-    background: #b2dfdb;
+  .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .card-icon {
     font-family: var(--font-heading);
     font-size: 4rem;
-    color: white;
+    color: var(--color-primary);
     opacity: 0.3;
   }
 

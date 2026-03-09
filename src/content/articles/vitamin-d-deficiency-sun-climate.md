@@ -27,7 +27,7 @@ hasAffiliateLinks: false
 
 You live in one of the sunniest places on earth. Your vitamin D should be excellent. But if you've had blood work done recently, there's a good chance it isn't.
 
-This isn't a fringe finding. Multiple studies across the Gulf region have documented vitamin D insufficiency rates between 50 and 90 percent of the population. The paradox is so well-established that researchers have given it a name: the sunshine paradox.
+This isn't a fringe finding. [Multiple studies](https://pubmed.ncbi.nlm.nih.gov/32397275/) across the Gulf region have documented vitamin D insufficiency rates between 50 and 90 percent of the population. The paradox is so well-established that researchers have given it a name: the sunshine paradox.
 
 It matters for your hair and skin more than you might think.
 
@@ -39,15 +39,15 @@ First, the heat itself keeps people indoors. When ambient temperatures regularly
 
 Second, clothing coverage reduces skin exposure. Whether for cultural, religious, or practical sun protection reasons, many women in hot climates cover most of their skin when outdoors. UVB cannot penetrate fabric.
 
-Third, sunscreen use blocks vitamin D synthesis. SPF 30, which dermatologists rightly recommend for UV protection, reduces vitamin D production by approximately 95 percent. There's a genuine tension between skin cancer prevention and vitamin D adequacy that most public health messaging doesn't address well.
+Third, [sunscreen use blocks vitamin D synthesis](https://www.health.harvard.edu/staying-healthy/time-for-more-vitamin-d). SPF 30, which dermatologists rightly recommend for UV protection, reduces vitamin D production by approximately 95 percent. There's a genuine tension between skin cancer prevention and vitamin D adequacy that most public health messaging doesn't address well.
 
 Fourth, melanin is a natural UVB filter. Women with darker skin tones require significantly more UVB exposure to produce the same amount of vitamin D as women with lighter skin. In a climate where outdoor time is already limited, this creates a compounding disadvantage.
 
 ## The Hair Loss Connection
 
-Vitamin D receptors are present in hair follicles, and research suggests they play a role in the hair growth cycle. Several studies have found associations between low vitamin D levels and telogen effluvium, as well as female pattern hair loss.
+Vitamin D receptors are present in hair follicles, and [research suggests they play a role in the hair growth cycle](https://pubmed.ncbi.nlm.nih.gov/30980598/). Several studies have found associations between low vitamin D levels and telogen effluvium, as well as female pattern hair loss.
 
-This doesn't mean vitamin D deficiency causes hair loss on its own. The relationship is more nuanced. Low vitamin D may make your follicles more vulnerable to other stressors, including the hard water and climate factors that are already working against your hair after relocation.
+This doesn't mean vitamin D deficiency causes hair loss on its own. The relationship is more nuanced. Low vitamin D may make your follicles more vulnerable to other stressors, including the [hard water and climate factors](/hair-scalp/expat-hair-loss-timeline-first-year/) that are already working against your hair after relocation.
 
 A 2019 review in Dermatology and Therapy concluded that vitamin D supplementation may be beneficial for hair loss associated with deficiency, but noted that evidence for supplementation in people with normal vitamin D levels is limited.
 
@@ -65,11 +65,11 @@ Vitamin D3 (cholecalciferol) is generally preferred over D2 (ergocalciferol) for
 
 The symptoms of vitamin D deficiency overlap with dozens of other conditions: fatigue, mood changes, muscle weakness, hair shedding. You can't diagnose it by symptoms alone. A simple blood test (25-hydroxyvitamin D) costs very little and gives you a definitive answer.
 
-If you've relocated to a hot climate and you're experiencing hair loss, fatigue, or both, get tested before assuming it's purely environmental. It may well be environmental, but ruling out nutritional deficiency first saves you months of treating the wrong problem.
+If you've relocated to a hot climate and you're experiencing hair loss, fatigue, or both, get tested before assuming it's purely environmental. A [broader supplement review](/nutrition-supplements/supplements-women-gulf-conditions/) can help identify other common deficiencies. It may well be environmental, but ruling out nutritional deficiency first saves you months of treating the wrong problem.
 
 ## References
 
-1. Almohanna HM, et al. The Role of Vitamins and Minerals in Hair Loss: A Review. Dermatol Ther. 2019;9(1):51-70.
-2. Siddiqui JA, et al. Vitamin D deficiency in the Middle East: A systematic review. Nutrients. 2020;12(5):1395.
-3. Rasheed H, et al. Serum ferritin and vitamin D in female hair loss. J Cosmet Dermatol. 2013;12(1):36-41.
-4. Holick MF. The vitamin D deficiency pandemic: Approaches for diagnosis, treatment and prevention. Rev Endocr Metab Disord. 2017;18(2):153-165.
+1. Almohanna HM, et al. [The Role of Vitamins and Minerals in Hair Loss: A Review](https://pubmed.ncbi.nlm.nih.gov/30980598/). Dermatol Ther. 2019;9(1):51-70.
+2. Siddiqui JA, et al. [Vitamin D deficiency in the Middle East: A systematic review](https://pubmed.ncbi.nlm.nih.gov/32397275/). Nutrients. 2020;12(5):1395.
+3. Rasheed H, et al. [Serum ferritin and vitamin D in female hair loss](https://pubmed.ncbi.nlm.nih.gov/23438566/). J Cosmet Dermatol. 2013;12(1):36-41.
+4. Holick MF. [The vitamin D deficiency pandemic](https://pubmed.ncbi.nlm.nih.gov/28516265/). Rev Endocr Metab Disord. 2017;18(2):153-165.

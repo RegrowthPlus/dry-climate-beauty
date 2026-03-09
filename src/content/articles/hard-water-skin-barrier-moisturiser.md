@@ -35,19 +35,19 @@ Hard water is water with high dissolved mineral content, primarily calcium and m
 
 First, the minerals react with your cleanser. Soap and many surfactant-based cleansers bind to calcium and magnesium ions, forming an insoluble residue. This is the same chemistry that creates soap scum in your bathtub. On your face, it means your cleanser doesn't rinse clean. A thin, invisible film of mineral-surfactant residue stays on your skin.
 
-Second, free mineral ions deposit directly on the skin surface. These ions can interact with your skin's lipid barrier, potentially disrupting the carefully organised structure of ceramides, cholesterol, and fatty acids that keeps moisture in and irritants out.
+Second, free mineral ions deposit directly on the skin surface. These ions can interact with your skin's lipid barrier, potentially disrupting the [carefully organised structure of ceramides, cholesterol, and fatty acids](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2843412/) that keeps moisture in and irritants out.
 
-A 2017 study published in the Journal of Investigative Dermatology found that hard water exposure increased transepidermal water loss (TEWL), a direct measure of barrier impairment. Participants who washed with hard water showed measurable barrier disruption compared to those who used softened water.
+A [2017 study published in the Journal of Investigative Dermatology](https://pubmed.ncbi.nlm.nih.gov/28935338/) found that hard water exposure increased transepidermal water loss (TEWL), a direct measure of barrier impairment. Participants who washed with hard water showed measurable barrier disruption compared to those who used softened water.
 
 *Medically reviewed note: Individuals with existing skin conditions such as eczema or rosacea may be more susceptible to hard water irritation. If you're experiencing persistent redness, scaling, or worsening of a pre-existing condition after relocation, consult a dermatologist rather than relying solely on product changes.*
 
 ## Why Your Moisturiser Can't Compensate
 
-Here's the problem with simply applying more moisturiser. Most moisturisers work by either drawing water into the skin (humectants like hyaluronic acid and glycerin), sealing moisture in (occlusives like petrolatum and dimethicone), or repairing the barrier structure (ceramides and fatty acids).
+Here's the problem with simply applying more moisturiser. Most moisturisers work by either drawing water into the skin (humectants like hyaluronic acid and glycerin), sealing moisture in (occlusives like petrolatum and dimethicone), or repairing the [barrier structure](https://www.aad.org/public/everyday-care/skin-care-basics/dry/moisturizer-for-dry-skin) (ceramides and fatty acids).
 
 If you're applying these products on top of a mineral film, their effectiveness is reduced. Humectants struggle to draw moisture through a mineral deposit layer. Occlusives seal in the residue along with the moisture. And ceramide-based barrier repair products can't integrate properly into a lipid structure that's already been disrupted.
 
-The problem compounds over time. Every wash adds another microscopic layer of mineral residue. Your barrier weakens slightly each time, becoming less able to retain moisture on its own, which makes you more dependent on the moisturiser that's becoming less effective.
+The problem compounds over time. Every wash adds another microscopic layer of mineral residue. Your barrier weakens slightly each time, becoming less able to retain moisture on its own, which makes you more dependent on the moisturiser that's becoming less effective. The same mineral buildup process [affects your hair](/hair-scalp/expat-hair-loss-timeline-first-year/) in parallel.
 
 ## The Routine Adjustments That Actually Help
 
@@ -65,10 +65,10 @@ Choose barrier-repair moisturisers with ceramides. Once you've minimised the min
 
 Shower filters marketed for hard water removal are popular, but the evidence for their effectiveness varies widely. Most consumer-grade filters use KDF or activated carbon, which are effective for chlorine removal but have limited impact on calcium and magnesium. True water softening requires ion exchange technology, which is typically a whole-home installation.
 
-That said, chlorine removal alone may provide some benefit if your water supply uses chlorination. Chlorine is a skin irritant and its removal reduces one source of barrier stress.
+That said, chlorine removal alone may provide some benefit if your water supply uses chlorination. Chlorine is a [skin irritant](https://www.clevelandclinic.org/health/diseases/chlorine-rash) and its removal reduces one source of barrier stress.
 
 ## References
 
-1. Danby SG, et al. Effect of water hardness on surfactant deposition after washing and subsequent skin irritation in atopic dermatitis patients and healthy control subjects. J Invest Dermatol. 2018;138(1):68-77.
-2. Pang CL, et al. Influence of hard water on eczema-related skin conditions. Int J Dermatol. 2019;58(7):746-754.
-3. Proksch E, et al. The skin: an indispensable barrier. Exp Dermatol. 2008;17(12):1063-1072.
+1. Danby SG, et al. [Effect of water hardness on surfactant deposition after washing and subsequent skin irritation](https://pubmed.ncbi.nlm.nih.gov/28935338/). J Invest Dermatol. 2018;138(1):68-77.
+2. Pang CL, et al. [Influence of hard water on eczema-related skin conditions](https://pubmed.ncbi.nlm.nih.gov/30693527/). Int J Dermatol. 2019;58(7):746-754.
+3. Proksch E, et al. [The skin: an indispensable barrier](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2843412/). Exp Dermatol. 2008;17(12):1063-1072.

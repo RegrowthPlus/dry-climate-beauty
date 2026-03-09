@@ -33,7 +33,7 @@ I lost more hair in the four months after my first child was born than I thought
 
 During pregnancy, elevated oestrogen keeps hair in the growth phase longer than usual. This is why many women notice thicker, fuller hair in the second and third trimesters. It's not that you're growing more hair. It's that you're losing less of it.
 
-After delivery, oestrogen drops rapidly. All the hair that was held in the growth phase during pregnancy shifts into the resting phase at once. Two to four months later, those hairs begin to fall out. This is telogen gravidarum, and it's a normal physiological process that resolves on its own for most women within 6 to 12 months.
+After delivery, oestrogen drops rapidly. All the hair that was held in the growth phase during pregnancy shifts into the resting phase at once. Two to four months later, those hairs begin to fall out. This is [telogen gravidarum](https://www.aad.org/public/diseases/hair-loss/insider/new-moms), and it's a normal physiological process that resolves on its own for most women within 6 to 12 months.
 
 The key word is "normal." The shedding itself is expected. The question is whether environmental factors are making it worse.
 
@@ -41,11 +41,11 @@ The key word is "normal." The shedding itself is expected. The question is wheth
 
 Hard water doesn't cause postpartum hair loss. The hormonal shift does. But hard water creates conditions that amplify the visible severity.
 
-Mineral buildup from calcium and magnesium makes hair shafts more brittle. Hair that's already in the telogen (resting) phase and approaching the shedding point is structurally weaker. Add a layer of mineral deposits, and those hairs break more easily, sometimes before they would have naturally detached from the follicle.
+[Mineral buildup from calcium and magnesium](https://pubmed.ncbi.nlm.nih.gov/24688579/) makes hair shafts more brittle. Hair that's already in the telogen (resting) phase and approaching the shedding point is structurally weaker. Add a layer of mineral deposits, and those hairs break more easily, sometimes before they would have naturally detached from the follicle.
 
-The result is that you're losing the normal postpartum volume of hair, plus additional breakage from mineral damage. It looks and feels like more hair loss than the hormonal shift alone would produce.
+The result is that you're losing the normal postpartum volume of hair, plus additional breakage from mineral damage. The pattern mirrors the [general expat hair loss timeline](/hair-scalp/expat-hair-loss-timeline-first-year/), but compressed and intensified by hormonal changes.
 
-Sleep deprivation and nutritional depletion (common in new mothers regardless of location) add further stress to an already overtaxed system.
+Sleep deprivation and nutritional depletion (common in new mothers regardless of location) add further stress to an already overtaxed system. [Vitamin D deficiency](/nutrition-supplements/vitamin-d-deficiency-sun-climate/) is particularly common in this population.
 
 *Medically reviewed note: Postpartum telogen effluvium is self-limiting in the vast majority of cases. However, persistent hair loss beyond 12 months postpartum, or loss that follows a patterned distribution rather than diffuse shedding, may indicate an underlying condition such as iron deficiency anaemia, thyroid dysfunction, or androgenetic alopecia unmasked by the hormonal shift. Blood work including ferritin, thyroid panel, and vitamin D should be considered if shedding does not improve.*
 
@@ -57,7 +57,7 @@ A chelating shampoo once a week made the most noticeable difference. Not because
 
 Gentle handling matters more than you think. When your hair is already in a vulnerable state, aggressive brushing, tight ponytails (I know, it's the default when you have a baby), and rough towel-drying all contribute to unnecessary breakage. A wide-tooth comb on damp hair, loose buns, and a microfibre towel are small changes that reduce mechanical damage.
 
-Nutritional support is important but not magical. Iron, vitamin D, and omega-3 fatty acids support hair health, and deficiencies in all three are common postpartum, especially in Gulf climates. Get your levels tested and supplement based on results rather than guessing.
+Nutritional support is important but not magical. [Iron, vitamin D, and omega-3 fatty acids](/nutrition-supplements/supplements-women-gulf-conditions/) support hair health, and deficiencies in all three are common postpartum, especially in Gulf climates. Get your levels tested and supplement based on results rather than guessing.
 
 What didn't help: expensive "hair growth" serums, biotin gummies (my levels were already normal), and the anxiety spiral of counting hairs in the shower drain.
 
@@ -71,7 +71,7 @@ If you're past 12 months and still experiencing significant shedding, that's the
 
 ## References
 
-1. Grover C, Khurana A. Telogen effluvium. Indian J Dermatol Venereol Leprol. 2013;79(5):591-603.
-2. Almohanna HM, et al. The Role of Vitamins and Minerals in Hair Loss: A Review. Dermatol Ther. 2019;9(1):51-70.
-3. Mirmirani P. Managing hair loss in midlife women. Maturitas. 2013;74(2):119-122.
-4. Evans S, et al. The effect of hard water on hair. Int J Trichology. 2013;5(3):137-139.
+1. Grover C, Khurana A. [Telogen effluvium](https://pubmed.ncbi.nlm.nih.gov/23760318/). Indian J Dermatol Venereol Leprol. 2013;79(5):591-603.
+2. Almohanna HM, et al. [The Role of Vitamins and Minerals in Hair Loss: A Review](https://pubmed.ncbi.nlm.nih.gov/30980598/). Dermatol Ther. 2019;9(1):51-70.
+3. Mirmirani P. [Managing hair loss in midlife women](https://pubmed.ncbi.nlm.nih.gov/23159191/). Maturitas. 2013;74(2):119-122.
+4. Evans S, et al. [The effect of hard water on hair](https://pubmed.ncbi.nlm.nih.gov/24688579/). Int J Trichology. 2013;5(3):137-139.

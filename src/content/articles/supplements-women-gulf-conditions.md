@@ -33,7 +33,7 @@ But supplements don't work that way. What helps depends on what you're actually 
 
 ### Vitamin D3
 
-This is the closest thing to a universal recommendation for Gulf residents. Studies consistently show that 50 to 90 percent of people living in Gulf climates have insufficient vitamin D levels, despite abundant sunshine. The reasons are well-documented: indoor lifestyles, sun avoidance during peak hours, modest clothing, and sunscreen use.
+This is the closest thing to a universal recommendation for Gulf residents. Studies consistently show that [50 to 90 percent of people living in Gulf climates](https://pubmed.ncbi.nlm.nih.gov/32397275/) have insufficient vitamin D levels, despite abundant sunshine. We cover the reasons in detail in our [vitamin D paradox article](/nutrition-supplements/vitamin-d-deficiency-sun-climate/). The reasons are well-documented: indoor lifestyles, sun avoidance during peak hours, modest clothing, and sunscreen use.
 
 For hair specifically, vitamin D receptors are present in hair follicles, and deficiency is associated with telogen effluvium. Supplementation in deficient individuals has shown improvement in some studies, though the evidence isn't strong enough to call it a hair loss treatment.
 
@@ -43,7 +43,7 @@ Typical maintenance dose: 1000 to 2000 IU daily, taken with a fat source for abs
 
 Iron deficiency is the most common nutritional deficiency worldwide, and women of reproductive age are disproportionately affected. In Gulf climates, the combination of reduced appetite in heat, dietary patterns, and menstrual losses creates conditions for subclinical deficiency.
 
-Ferritin (stored iron) below 40 ng/mL is associated with increased hair shedding in several studies, even when it's technically within the "normal" laboratory range. Many dermatologists and trichologists consider 70 ng/mL or above to be optimal for hair health.
+[Ferritin (stored iron) below 40 ng/mL is associated with increased hair shedding](https://pubmed.ncbi.nlm.nih.gov/23438566/) in several studies, even when it's technically within the "normal" laboratory range. Many dermatologists and trichologists consider 70 ng/mL or above to be optimal for hair health.
 
 *Medically reviewed note: Iron supplementation should be based on blood test results, not symptoms alone. Excess iron carries its own health risks, including gastrointestinal distress and, in rare cases, iron overload. Women with heavy menstrual periods, vegetarian or vegan diets, or a history of anaemia should prioritise testing.*
 
@@ -51,9 +51,9 @@ Ferritin (stored iron) below 40 ng/mL is associated with increased hair shedding
 
 ### Omega-3 Fatty Acids
 
-Omega-3s (EPA and DHA) have reasonable evidence for supporting skin barrier function, reducing inflammation, and potentially supporting hair growth. A 2015 study in the Journal of Cosmetic Dermatology found that supplementation with omega-3 and omega-6 fatty acids reduced hair loss and improved hair density over a 6-month period.
+Omega-3s (EPA and DHA) have reasonable evidence for supporting skin barrier function, reducing inflammation, and potentially supporting hair growth. A [2015 study in the Journal of Cosmetic Dermatology](https://pubmed.ncbi.nlm.nih.gov/25573272/) found that supplementation with omega-3 and omega-6 fatty acids reduced hair loss and improved hair density over a 6-month period.
 
-For skin, omega-3s may help maintain the lipid barrier, which is relevant in dry climates where barrier disruption is a chronic challenge.
+For skin, omega-3s may help maintain the lipid barrier, which is relevant in dry climates where [barrier disruption](/skin-body/hard-water-skin-barrier-moisturiser/) is a chronic challenge.
 
 Typical dose: 1000 to 2000 mg combined EPA/DHA daily. Fish oil and algae-based supplements are both effective.
 
@@ -67,7 +67,7 @@ Don't supplement zinc without testing. Excess zinc interferes with copper absorp
 
 ### Biotin
 
-Biotin is the most aggressively marketed hair supplement, and in most cases it's the least necessary. True biotin deficiency is rare in people eating a varied diet. Multiple reviews have concluded that biotin supplementation does not improve hair quality or reduce shedding in people with normal biotin levels.
+Biotin is the most aggressively marketed hair supplement, and in most cases it's the least necessary. True biotin deficiency is rare in people eating a varied diet. [Multiple reviews](https://pubmed.ncbi.nlm.nih.gov/28879195/) have concluded that biotin supplementation does not improve hair quality or reduce shedding in people with normal biotin levels.
 
 The studies that show benefits are almost exclusively in biotin-deficient populations. Unless testing confirms deficiency, your money is better spent elsewhere.
 
@@ -75,7 +75,7 @@ One important caveat: biotin supplements can interfere with certain blood tests,
 
 ### Collagen
 
-Collagen supplements (typically hydrolysed collagen peptides) have some emerging evidence for skin hydration and elasticity. A 2019 meta-analysis found modest improvements in skin hydration after 8 to 12 weeks of supplementation.
+Collagen supplements (typically hydrolysed collagen peptides) have some emerging evidence for skin hydration and elasticity. A [2019 meta-analysis](https://pubmed.ncbi.nlm.nih.gov/30681787/) found modest improvements in skin hydration after 8 to 12 weeks of supplementation.
 
 For hair, the evidence is weaker. Collagen provides amino acids (especially glycine and proline) that are building blocks for keratin, but whether supplemental collagen reaches the hair follicle in meaningful quantities is not well-established.
 
@@ -85,7 +85,7 @@ If you want to try collagen, set realistic expectations. It may support skin qua
 
 Get blood work first. At minimum: 25-hydroxyvitamin D, ferritin, complete blood count, and thyroid panel. This takes the guessing out of supplementation.
 
-Address confirmed deficiencies aggressively. Vitamin D and iron deficiency respond well to targeted supplementation. These are the most likely to make a measurable difference.
+Address confirmed deficiencies aggressively. Vitamin D and iron deficiency respond well to targeted supplementation. These are the most likely to make a measurable difference, especially if you're also dealing with [hard water effects on your hair and skin](/hair-scalp/expat-hair-loss-timeline-first-year/).
 
 Add omega-3 as a general support. The evidence is moderate but the risk is low and the benefits extend beyond hair and skin.
 
@@ -93,7 +93,7 @@ Skip the expensive multi-ingredient "hair vitamins" unless they contain the spec
 
 ## References
 
-1. Almohanna HM, et al. The Role of Vitamins and Minerals in Hair Loss: A Review. Dermatol Ther. 2019;9(1):51-70.
-2. Le Floc'h C, et al. Effect of a nutritional supplement on hair loss in women. J Cosmet Dermatol. 2015;14(1):76-82.
-3. Patel DP, et al. A review of the use of biotin for hair loss. Skin Appendage Disord. 2017;3(3):166-169.
-4. Choi FD, et al. Oral collagen supplementation: a systematic review. J Drugs Dermatol. 2019;18(1):9-16.
+1. Almohanna HM, et al. [The Role of Vitamins and Minerals in Hair Loss: A Review](https://pubmed.ncbi.nlm.nih.gov/30980598/). Dermatol Ther. 2019;9(1):51-70.
+2. Le Floc'h C, et al. [Effect of a nutritional supplement on hair loss in women](https://pubmed.ncbi.nlm.nih.gov/25573272/). J Cosmet Dermatol. 2015;14(1):76-82.
+3. Patel DP, et al. [A review of the use of biotin for hair loss](https://pubmed.ncbi.nlm.nih.gov/28879195/). Skin Appendage Disord. 2017;3(3):166-169.
+4. Choi FD, et al. [Oral collagen supplementation: a systematic review](https://pubmed.ncbi.nlm.nih.gov/30681787/). J Drugs Dermatol. 2019;18(1):9-16.
