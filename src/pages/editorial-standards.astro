@@ -1,120 +1,118 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { siteConfig } from '../../site.config';
 ---
 
-<BaseLayout title="Editorial Standards" description={`How ${siteConfig.name} ensures accuracy, independence, and transparency in every article.`}>
-  <Header />
+<BaseLayout
+  title={`Editorial Standards & Fact-Checking - ${siteConfig.name}`}
+  description="How Dry Climate Beauty researches, writes, and verifies its content to ensure accuracy and editorial integrity."
+>
+  <main class="page-content">
+    <div class="content-wrapper">
+      <h1>Editorial Standards & Fact-Checking</h1>
 
-  <main class="static-page">
-    <div class="container">
-      <Breadcrumbs items={[{ name: 'Editorial Standards' }]} />
-
-      <h1>Editorial Standards</h1>
-
-      <!-- SITE-SPECIFIC: Customize the editorial process to match your team's actual workflow -->
-      <section class="page-section">
-        <h2>Our Editorial Process</h2>
-        <p>Every article published on {siteConfig.name} follows a structured editorial process designed to ensure accuracy, clarity, and usefulness.</p>
-        <ol>
-          <li><strong>Research</strong> — Our writers begin by reviewing the latest peer-reviewed literature, clinical guidelines, and expert sources on the topic.</li>
-          <li><strong>Writing</strong> — Articles are written in clear, accessible language. We avoid jargon and explain technical terms when they are necessary.</li>
-          <li><strong>Fact-checking</strong> — All factual claims are verified against primary sources. Statistics, study results, and medical information are double-checked.</li>
-          <li><strong>Expert review</strong> — Where indicated, articles are reviewed by a qualified professional for clinical accuracy.</li>
-          <li><strong>Publication</strong> — Articles are published with clear attribution, source links, and review dates.</li>
-        </ol>
+      <section>
+        <p>
+          Dry Climate Beauty publishes content about topics that affect your health, your purchasing decisions, and your wellbeing. We take that responsibility seriously. This page explains how we research, write, review, and maintain our content.
+        </p>
       </section>
 
-      <!-- SITE-SPECIFIC: Adjust the review process description for your team -->
-      <section class="page-section">
-        <h2>Medical Review</h2>
-        <p>Articles covering medical or clinical topics are reviewed by qualified health professionals. Medical review involves evaluating the article for:</p>
-        <ul>
-          <li>Clinical accuracy of health claims</li>
-          <li>Appropriate context for research findings</li>
-          <li>Clear distinction between established science and emerging research</li>
-          <li>Balanced presentation of treatment options and their limitations</li>
-        </ul>
-        <p>Medical review does not constitute personal medical advice. Readers should consult their healthcare provider for individualized guidance.</p>
+      <section>
+        <h2>How We Research</h2>
+        <p>
+          Every article begins with research, not assumptions. Our writers consult peer-reviewed journals (PubMed, ScienceDirect), clinical guidelines from recognised medical institutions (AAD, WHO, Mayo Clinic), and primary sources wherever possible. We prefer meta-analyses and systematic reviews over individual studies. When only preliminary or small-sample research exists, we say so explicitly.
+        </p>
+        <p>
+          We do not cite social media posts, brand marketing materials, or unverified wellness blogs as sources for health claims. Anecdotal evidence is labelled as anecdotal.
+        </p>
       </section>
 
-      <section class="page-section">
-        <h2>Editorial Independence</h2>
-        <p>Our editorial team operates independently from our business relationships. Advertisers and affiliate partners have no influence over:</p>
-        <ul>
-          <li>Which topics we cover</li>
-          <li>What conclusions our articles reach</li>
-          <li>Which products or treatments we recommend</li>
-          <li>The content of our reviews or comparisons</li>
-        </ul>
+      <section>
+        <h2>How We Write</h2>
+        <p>
+          Our editorial voice is warm, direct, and honest. We write for an intelligent reader who is overwhelmed by conflicting information and wants clear answers backed by evidence. We do not use hedge language to avoid taking a position; we use it when the evidence genuinely warrants caution.
+        </p>
+        <p>
+          Health content uses responsible framing: "may," "research suggests," and "some studies show" rather than definitive diagnostic statements. Every article about a medical condition or treatment includes a recommendation to consult a qualified healthcare professional.
+        </p>
       </section>
 
-      <section class="page-section">
+      <section>
+        <h2>Medical Review Process</h2>
+        <p>
+          All articles containing health claims, clinical references, treatment discussions, or supplement recommendations are reviewed by Dr. Layla Hassan, our consulting trichologist and dermatology specialist. Her review ensures factual accuracy, source quality, and appropriate medical framing. For full details on what medical review covers and its scope, see our <a href="/medical-review-board/">Medical Review Board</a> page.
+        </p>
+      </section>
+
+      <section>
+        <h2>Sourcing Standards</h2>
+        <p>
+          All clinical claims require inline linked sources. We prefer peer-reviewed research published in reputable journals. Government health agencies, recognised medical institutions, and established clinical guidelines are acceptable primary sources. Every article with cited claims includes a References section at the bottom.
+        </p>
+        <p>
+          We do not cite sources behind paywalls without noting the access limitation. When we reference a study, we include the date, sample size context, and any relevant limitations.
+        </p>
+      </section>
+
+      <section>
+        <h2>Product Recommendations</h2>
+        <p>
+          Product recommendations are based on direct testing by our editorial team, ingredient analysis, and suitability for hard water and dry climate conditions. We do not accept payment for positive reviews. Affiliate relationships are disclosed clearly and never influence editorial verdicts.
+        </p>
+        <p>
+          When we recommend a product, we explain why it works for the specific environmental conditions we cover. When a product doesn't perform well in testing, we say so.
+        </p>
+      </section>
+
+      <section>
         <h2>Corrections Policy</h2>
-        <p>We take accuracy seriously. If an error is identified in a published article, we will:</p>
-        <ul>
-          <li>Correct the error promptly</li>
-          <li>Note the correction at the bottom of the article with the date and nature of the change</li>
-          <li>Update the "last updated" date</li>
-        </ul>
-        <!-- SITE-SPECIFIC: Replace with your actual corrections contact -->
-        <p>To report an error, contact us at <strong>corrections@example.com</strong>.</p>
+        <p>
+          If we publish inaccurate information, we correct it promptly. Corrections are noted at the top of the affected article with a description of what changed and when. We do not silently edit published health content.
+        </p>
+        <p>
+          If you believe an article contains an error, contact <strong>editorial@dryclimatebeauty.com</strong> with the article URL and your concern.
+        </p>
       </section>
 
-      <section class="page-section">
+      <section>
         <h2>Content Updates</h2>
-        <p>Health information evolves as new research is published. We periodically review and update our articles to reflect the latest evidence. Updated articles display a "last updated" date alongside the original publication date.</p>
+        <p>
+          Health and beauty information evolves. We review high-traffic articles periodically to ensure claims remain current, sources are still valid, and product recommendations reflect available options. Updated articles display a "Last updated" date.
+        </p>
       </section>
     </div>
   </main>
-
-  <Footer />
 </BaseLayout>
 
 <style>
-  .static-page {
-    padding: var(--space-xl) 0 var(--space-3xl);
+  .page-content {
+    padding: 2rem 0 4rem;
   }
-
+  .content-wrapper {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
   h1 {
     font-family: var(--font-heading);
-    font-size: 2.25rem;
-    margin-bottom: var(--space-xl);
-  }
-
-  .page-section {
-    margin-bottom: var(--space-2xl);
-    max-width: 700px;
-  }
-
-  .page-section h2 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    margin-bottom: var(--space-md);
-  }
-
-  .page-section p,
-  .page-section li {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
     color: var(--color-text);
-    line-height: 1.7;
   }
-
-  .page-section ul,
-  .page-section ol {
-    padding-left: 1.5em;
-    margin-bottom: 1.5em;
+  h2 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    margin: 2.5rem 0 1rem;
+    color: var(--color-text);
   }
-
-  .page-section li {
-    margin-bottom: 0.5em;
+  p {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.2rem;
   }
-
-  @media (min-width: 1025px) {
-    h1 {
-      font-size: 2.5rem;
-    }
+  a {
+    color: var(--color-primary);
   }
 </style>

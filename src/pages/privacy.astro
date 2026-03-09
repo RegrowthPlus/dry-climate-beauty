@@ -1,132 +1,121 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { siteConfig } from '../../site.config';
 ---
 
-<BaseLayout title="Privacy Policy" description={`Privacy policy for ${siteConfig.name}. Learn how we collect, use, and protect your information.`}>
-  <Header />
-
-  <main class="static-page">
-    <div class="container">
-      <Breadcrumbs items={[{ name: 'Privacy Policy' }]} />
-
+<BaseLayout
+  title={`Privacy Policy - ${siteConfig.name}`}
+  description={`Privacy policy for ${siteConfig.name}. How we handle your data and protect your privacy.`}
+>
+  <main class="page-content">
+    <div class="content-wrapper">
       <h1>Privacy Policy</h1>
+      <p class="updated-date">Last updated: March 2026</p>
 
-      <!-- SITE-SPECIFIC: Update the effective date and all sections to reflect your actual data practices -->
-      <p class="last-updated">Last updated: March 2026</p>
+      <section>
+        <h2>Who We Are</h2>
+        <p>
+          Dry Climate Beauty (dryclimatebeauty.com) is an independent beauty and wellness publication. This privacy policy explains how we collect, use, and protect information when you visit our website.
+        </p>
+      </section>
 
-      <section class="page-section">
+      <section>
         <h2>Information We Collect</h2>
-        <p>{siteConfig.name} collects minimal personal information. The types of data we may collect include:</p>
-        <ul>
-          <li><strong>Email address</strong> — If you subscribe to our newsletter, we collect your email address to send you content updates.</li>
-          <li><strong>Usage data</strong> — We collect anonymized analytics data such as pages visited, time on site, and referring URLs to improve our content.</li>
-          <li><strong>Cookies</strong> — We use essential cookies to ensure our website functions correctly. See the Cookies section below for details.</li>
-        </ul>
+        <p>
+          We collect minimal information. When you visit our site, standard web server logs may record your IP address, browser type, pages visited, and referring URL. If you subscribe to our newsletter, we collect your email address. We do not collect personal health information, financial data, or create user profiles for advertising purposes.
+        </p>
       </section>
 
-      <section class="page-section">
-        <h2>How We Use Your Information</h2>
-        <p>We use the information we collect to:</p>
-        <ul>
-          <li>Send newsletter emails to subscribers who have opted in</li>
-          <li>Analyze aggregate traffic patterns to improve our content</li>
-          <li>Ensure the technical functionality of our website</li>
-        </ul>
-        <p>We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
+      <section>
+        <h2>How We Use Information</h2>
+        <p>
+          Server logs are used to understand traffic patterns and improve site performance. Email addresses are used solely for newsletter delivery. We do not sell, trade, or share your personal information with third parties for marketing purposes.
+        </p>
       </section>
 
-      <section class="page-section">
-        <h2>Cookies</h2>
-        <p>Our website uses cookies for the following purposes:</p>
-        <ul>
-          <li><strong>Essential cookies</strong> — Required for basic site functionality. These cannot be disabled.</li>
-          <li><strong>Analytics cookies</strong> — Help us understand how visitors interact with our site. These are anonymized and do not identify individual users.</li>
-        </ul>
-        <p>You can control cookie settings through your browser preferences. Disabling cookies may affect some site functionality.</p>
+      <section>
+        <h2>Cookies and Tracking</h2>
+        <p>
+          We use essential cookies for basic site functionality. We may use analytics services to understand how visitors use the site. These services may set their own cookies. You can control cookie settings through your browser preferences.
+        </p>
       </section>
 
-      <section class="page-section">
+      <section>
+        <h2>Affiliate Links</h2>
+        <p>
+          Our articles contain affiliate links to product retailers. When you click these links, the retailer may set cookies to track the referral. This is standard affiliate tracking and is governed by the retailer's own privacy policy. We do not receive personally identifiable information about your purchases.
+        </p>
+      </section>
+
+      <section>
         <h2>Third-Party Services</h2>
-        <p>We may use the following third-party services that have their own privacy policies:</p>
-        <ul>
-          <li><strong>Analytics</strong> — We use privacy-respecting analytics to understand site traffic.</li>
-          <li><strong>Email service</strong> — Newsletter emails are sent through a third-party email delivery service.</li>
-          <li><strong>Hosting</strong> — Our site is hosted on Cloudflare Pages.</li>
-        </ul>
+        <p>
+          We may use third-party services for analytics, email delivery, and content hosting. These services have their own privacy policies. We select providers that meet reasonable data protection standards.
+        </p>
       </section>
 
-      <section class="page-section">
+      <section>
+        <h2>Data Retention</h2>
+        <p>
+          Server logs are retained for 90 days. Email subscription data is retained until you unsubscribe. We do not maintain permanent records of visitor browsing behavior.
+        </p>
+      </section>
+
+      <section>
         <h2>Your Rights</h2>
-        <p>You have the right to:</p>
-        <ul>
-          <li>Request access to the personal data we hold about you</li>
-          <li>Request correction or deletion of your personal data</li>
-          <li>Unsubscribe from our newsletter at any time using the link in any email</li>
-          <li>Opt out of analytics tracking by using browser-level privacy tools</li>
-        </ul>
+        <p>
+          You can request access to, correction of, or deletion of any personal data we hold about you. To exercise these rights, contact <strong>privacy@dryclimatebeauty.com</strong>. If you're subscribed to our newsletter, every email includes an unsubscribe link.
+        </p>
       </section>
 
-      <!-- SITE-SPECIFIC: Replace with your actual contact information -->
-      <section class="page-section">
-        <h2>Contact Us</h2>
-        <p>If you have questions about this privacy policy or your personal data, contact us at <strong>privacy@example.com</strong>.</p>
+      <section>
+        <h2>Changes to This Policy</h2>
+        <p>
+          We may update this privacy policy occasionally. Changes will be posted on this page with an updated date. We do not make material changes without notice.
+        </p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>
+          For privacy-related questions, email <strong>privacy@dryclimatebeauty.com</strong>.
+        </p>
       </section>
     </div>
   </main>
-
-  <Footer />
 </BaseLayout>
 
 <style>
-  .static-page {
-    padding: var(--space-xl) 0 var(--space-3xl);
+  .page-content {
+    padding: 2rem 0 4rem;
   }
-
+  .content-wrapper {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
   h1 {
     font-family: var(--font-heading);
-    font-size: 2.25rem;
-    margin-bottom: var(--space-sm);
-  }
-
-  .last-updated {
-    font-size: 0.875rem;
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-xl);
-  }
-
-  .page-section {
-    margin-bottom: var(--space-2xl);
-    max-width: 700px;
-  }
-
-  .page-section h2 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    margin-bottom: var(--space-md);
-  }
-
-  .page-section p,
-  .page-section li {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
     color: var(--color-text);
-    line-height: 1.7;
   }
-
-  .page-section ul {
-    padding-left: 1.5em;
-    margin-bottom: 1.5em;
+  .updated-date {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
   }
-
-  .page-section li {
-    margin-bottom: 0.5em;
+  h2 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    margin: 2.5rem 0 1rem;
+    color: var(--color-text);
   }
-
-  @media (min-width: 1025px) {
-    h1 {
-      font-size: 2.5rem;
-    }
+  p {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.2rem;
   }
 </style>

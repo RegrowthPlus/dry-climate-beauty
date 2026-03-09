@@ -1,0 +1,215 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../../site.config';
+---
+
+<BaseLayout
+  title={`Medical Review Board - ${siteConfig.name}`}
+  description="How Dry Climate Beauty ensures medical accuracy through independent trichological review of all health content."
+>
+  <main class="page-content">
+    <div class="content-wrapper">
+      <h1>Medical Review Board</h1>
+
+      <section class="review-intro">
+        <p>
+          Dry Climate Beauty publishes content that touches on health topics including hair loss, skin conditions, nutritional deficiency, postpartum wellness, and supplement efficacy. Because this content falls under what search engines classify as Your Money or Your Life (YMYL) information, we hold it to a higher standard than lifestyle or opinion content.
+        </p>
+        <p>
+          Every article that makes health claims, discusses medical conditions, recommends treatments, or references clinical research is reviewed by a qualified medical professional before publication. This isn't a formality. The review process catches inaccurate claims, strengthens sourcing, and ensures we communicate health information responsibly.
+        </p>
+      </section>
+
+      <section class="reviewer-profile">
+        <h2>Our Medical Reviewer</h2>
+        <div class="reviewer-card">
+          <img src="/images/authors/dr-layla-hassan.webp" alt="Dr. Layla Hassan" class="reviewer-photo" width="160" height="160" />
+          <div class="reviewer-details">
+            <h3>Dr. Layla Hassan</h3>
+            <p class="reviewer-title">Trichologist and Dermatology Consultant</p>
+            <p class="reviewer-credentials">
+              BSc Biomedical Sciences, Diploma in Trichology, 12 years of clinical practice specialising in environment-related hair and scalp conditions.
+            </p>
+            <p class="reviewer-bio">
+              Dr. Hassan has spent her career at the intersection of dermatology and environmental medicine. She observed early in her practice that patients relocating to dry, mineral-heavy climates presented with a distinct set of hair and scalp conditions that were often misdiagnosed or attributed to stress alone. Her clinical focus on environment-related dermatology makes her uniquely qualified to review content in this space.
+            </p>
+          </div>
+        </div>
+
+        <div class="reviewer-disclaimer">
+          <h3>Important: Scope of Dr. Hassan's Role</h3>
+          <p>
+            Dr. Hassan's involvement with Dry Climate Beauty is limited to medical review and fact-checking. She does not:
+          </p>
+          <ul>
+            <li>Provide editorial direction or influence topic selection</li>
+            <li>Endorse any products featured on the site</li>
+            <li>Receive compensation tied to product recommendations or affiliate revenue</li>
+            <li>Write articles or contribute editorial content</li>
+          </ul>
+          <p>
+            Her role is to ensure that health-related content published on this site meets standards of medical accuracy, appropriate sourcing, and responsible communication. When an article carries the "Medically reviewed by Dr. Layla Hassan" label, it means she has reviewed the factual claims, source quality, and language for medical appropriateness.
+          </p>
+        </div>
+      </section>
+
+      <section class="review-process">
+        <h2>What Medical Review Covers</h2>
+        <p>
+          Not all content on Dry Climate Beauty goes through medical review. Here is how we determine what requires it:
+        </p>
+
+        <div class="process-grid">
+          <div class="process-card">
+            <h3>Always Reviewed</h3>
+            <ul>
+              <li>Articles discussing medical conditions (hair loss, dermatitis, telogen effluvium)</li>
+              <li>Content about pharmaceutical treatments (minoxidil, finasteride)</li>
+              <li>Supplement efficacy claims (biotin, vitamin D, omega-3)</li>
+              <li>Postpartum health content</li>
+              <li>Any article citing clinical research</li>
+            </ul>
+          </div>
+          <div class="process-card">
+            <h3>Not Required</h3>
+            <ul>
+              <li>Product texture and usability reviews</li>
+              <li>Lifestyle and personal experience pieces</li>
+              <li>General beauty tips without health claims</li>
+              <li>Ingredient descriptions without medical claims</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="review-standards">
+        <h2>Review Standards</h2>
+        <p>
+          During medical review, Dr. Hassan evaluates content against these criteria:
+        </p>
+        <ul>
+          <li><strong>Factual accuracy</strong> - Are clinical claims supported by peer-reviewed research?</li>
+          <li><strong>Source quality</strong> - Do citations come from reputable journals, institutions, or clinical guidelines?</li>
+          <li><strong>Appropriate language</strong> - Does the article use hedging language ("may," "research suggests") rather than definitive diagnostic statements?</li>
+          <li><strong>Professional consultation</strong> - Does the article recommend seeing a healthcare provider for persistent or serious concerns?</li>
+          <li><strong>No overreach</strong> - Does the content stay within the bounds of what evidence supports, without extrapolating beyond the research?</li>
+        </ul>
+      </section>
+
+      <section class="review-contact">
+        <h2>Questions About Our Medical Review Process</h2>
+        <p>
+          If you have questions about a specific claim in one of our articles, or if you believe we've published inaccurate health information, contact us at <strong>editorial@dryclimatebeauty.com</strong> with the article URL and your concern. We take accuracy seriously and will investigate promptly.
+        </p>
+      </section>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .page-content {
+    padding: 2rem 0 4rem;
+  }
+  .content-wrapper {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-text);
+  }
+  h2 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    margin: 2.5rem 0 1rem;
+    color: var(--color-text);
+  }
+  h3 {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text);
+  }
+  p {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.2rem;
+  }
+  ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+  li {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.5rem;
+  }
+  .reviewer-card {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 2rem;
+    background: var(--color-surface-highlight, #F0EBF5);
+    border-radius: 12px;
+    border-left: 4px solid var(--color-primary);
+    margin: 1.5rem 0;
+  }
+  .reviewer-photo {
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .reviewer-title {
+    color: var(--color-primary);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  .reviewer-credentials {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+  }
+  .reviewer-disclaimer {
+    background: var(--color-surface, #F4F0EB);
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    border-left: 4px solid var(--color-accent, #D4896A);
+  }
+  .reviewer-disclaimer h3 {
+    color: var(--color-accent, #D4896A);
+  }
+  .process-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .process-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: var(--color-card-background, #FFFFFF);
+    border: 1px solid var(--color-border);
+  }
+  .process-card h3 {
+    margin-top: 0;
+  }
+  @media (max-width: 640px) {
+    .reviewer-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .process-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
