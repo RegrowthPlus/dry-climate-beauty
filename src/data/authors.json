@@ -1,25 +1,52 @@
 {
-  "sarah-mitchell": {
-    "name": "Dr. Sarah Mitchell",
-    "slug": "sarah-mitchell",
-    "title": "Health Science Editor",
-    "photo": "/images/authors/sarah-mitchell.webp",
-    "bio": "Dr. Sarah Mitchell holds a Ph.D. in Dermatological Sciences and has spent over a decade researching the effects of environmental factors on hair and skin health. She specializes in mineral-related scalp conditions and water quality impacts on personal care. Her work has been cited in peer-reviewed trichology journals.",
-    "credentials": "Ph.D. Dermatological Sciences, Certified Trichology Researcher",
-    "expertise": ["Dermatological Sciences", "Trichology", "Water Quality & Hair Health"],
-    "isReviewer": true,
+  "emma-calloway": {
+    "name": "Emma Calloway",
+    "slug": "emma-calloway",
+    "title": "Editor-in-Chief",
+    "photo": "/images/authors/emma-calloway.webp",
+    "bio": "Emma Calloway has spent most of her adult life moving between climates, growing up in Australia, working in London, and for the past eight years, living in the Gulf. Each relocation taught her something about how much environment shapes your hair, skin, and general wellbeing. The Gulf was the most dramatic shift. Within six months, her hair and skin were behaving like they belonged to someone else. She couldn't find a resource that took the environmental angle seriously, so she built one. She leads all editorial direction at Dry Climate Beauty, writes the site's most widely read features, and personally tests products before recommending them.",
+    "credentials": "Former beauty and wellness editor, regional women's lifestyle media, 11 years coverage, 8 years Gulf resident, Australian background",
+    "expertise": ["Beauty Editing", "Hair & Skin Under Extreme Climate", "Expat Wellness", "Ingredient Literacy", "Product Curation"],
+    "isReviewer": false,
     "social": {
       "linkedin": ""
     }
   },
-  "james-walker": {
-    "name": "James Walker",
-    "slug": "james-walker",
-    "title": "Wellness & Nutrition Writer",
-    "photo": "/images/authors/james-walker.webp",
-    "bio": "James Walker is a health and wellness journalist with eight years of experience covering nutrition science, natural remedies, and evidence-based hair care. He focuses on translating complex research into practical guidance for everyday readers.",
-    "credentials": "B.Sc. Nutrition Science, Health Journalism Certificate",
-    "expertise": ["Nutrition Science", "Natural Remedies", "Hair Care"],
+  "dr-layla-hassan": {
+    "name": "Dr. Layla Hassan",
+    "slug": "dr-layla-hassan",
+    "title": "Trichologist and Dermatology Consultant",
+    "photo": "/images/authors/dr-layla-hassan.webp",
+    "bio": "Dr. Layla Hassan has spent her career at the intersection of dermatology and environmental medicine, a niche that became increasingly relevant as she observed patterns in patients relocating to dry, mineral-heavy climates. She reviews all health and clinical content on Dry Climate Beauty to ensure accuracy, appropriate sourcing, and responsible framing of medical information. She does not endorse products and her review role is limited to factual accuracy.",
+    "credentials": "BSc Biomedical Sciences, Diploma in Trichology, 12 years clinical practice, specialises in environment-related hair and scalp conditions",
+    "expertise": ["Trichology", "Dermatology", "Hair Loss", "Scalp Conditions", "Hard Water Effects", "Environmental Medicine"],
+    "isReviewer": true,
+    "reviewerDisclaimer": "Dr. Hassan's role at Dry Climate Beauty is limited to medical review and fact-checking. She does not provide editorial direction, endorse products, or receive compensation tied to product recommendations. Her review ensures that health-related content meets standards of medical accuracy and responsible communication.",
+    "social": {
+      "linkedin": ""
+    }
+  },
+  "nadia-serhan": {
+    "name": "Nadia Serhan",
+    "slug": "nadia-serhan",
+    "title": "Lifestyle and Wellness Writer",
+    "photo": "/images/authors/nadia-serhan.webp",
+    "bio": "Nadia Serhan writes about the messy, practical reality of maintaining your health and appearance while raising small children in a climate that isn't always on your side. She moved to the Gulf before her first child was born and has spent seven years navigating postpartum hair loss, baby skincare, toddler routines, and everything in between. Her content is honest, slightly irreverent, and never condescending. She assumes her reader is exhausted and needs actual answers, not encouragement.",
+    "credentials": "Lifestyle journalism background, mother of two, postpartum health, family wellness, expat parenting",
+    "expertise": ["Postpartum Wellness", "Baby & Toddler Skin/Hair Care", "Family Health", "Gulf Expat Parenting"],
+    "isReviewer": false,
+    "social": {
+      "linkedin": ""
+    }
+  },
+  "priya-mehta": {
+    "name": "Priya Mehta",
+    "slug": "priya-mehta",
+    "title": "Nutritional Health Writer",
+    "photo": "/images/authors/priya-mehta.webp",
+    "bio": "Priya Mehta writes about the nutritional side of health and beauty: the supplements that actually have clinical backing, the deficiencies that are common in Gulf residents regardless of diet, and the difference between what wellness culture tells you to take and what the research actually shows. She approaches nutrition writing with healthy scepticism: she cites her sources, flags weak evidence, and doesn't recommend things just because they're popular.",
+    "credentials": "BSc Nutritional Science, 4 years writing nutrition and supplement content, micronutrient deficiencies in expat populations",
+    "expertise": ["Nutritional Science", "Supplementation", "Micronutrient Deficiency", "Hydration Science", "Diet & Hair/Skin Health"],
     "isReviewer": false,
     "social": {
       "linkedin": ""
