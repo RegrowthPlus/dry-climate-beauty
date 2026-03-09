@@ -10,8 +10,14 @@ heroAlt: "Supplement capsules arranged on a light marble surface with fresh frui
 readingTime: 8
 tags: ["supplements", "women", "Gulf", "vitamin D", "iron", "omega-3", "biotin"]
 featured: false
-hasAffiliateLinks: false
+hasAffiliateLinks: true
 ---
+
+<div class="affiliate-disclosure">
+
+*This article contains affiliate links. See our [affiliate disclosure](/affiliate-disclosure/) for details.*
+
+</div>
 
 <div class="key-takeaways">
 
@@ -85,7 +91,7 @@ If you want to try collagen, set realistic expectations. It may support skin qua
 
 Get blood work first. At minimum: 25-hydroxyvitamin D, ferritin, complete blood count, and thyroid panel. This takes the guessing out of supplementation.
 
-Address confirmed deficiencies aggressively. Vitamin D and iron deficiency respond well to targeted supplementation. These are the most likely to make a measurable difference, especially if you're also dealing with [hard water effects on your hair and skin](/hair-scalp/expat-hair-loss-timeline-first-year/).
+Address confirmed deficiencies aggressively. Vitamin D and iron deficiency respond well to targeted supplementation. These are the most likely to make a measurable difference, especially if you're also dealing with [hard water effects on your hair and skin](/hair-scalp/expat-hair-loss-timeline-first-year/). Pairing nutritional correction with a topical chelating routine, using a product like [Regrowth+](https://regrowthplus.com?utm_source=blog_007&utm_medium=editorial) to address mineral buildup, tackles the problem from both sides.
 
 Add omega-3 as a general support. The evidence is moderate but the risk is low and the benefits extend beyond hair and skin.
 

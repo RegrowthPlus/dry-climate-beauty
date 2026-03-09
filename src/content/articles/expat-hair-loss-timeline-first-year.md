@@ -10,8 +10,14 @@ heroAlt: "Woman examining her hair in a bathroom mirror in a bright, sunlit apar
 readingTime: 8
 tags: ["expat hair loss", "hair loss timeline", "hard water", "relocation", "telogen effluvium"]
 featured: true
-hasAffiliateLinks: false
+hasAffiliateLinks: true
 ---
+
+<div class="affiliate-disclosure">
+
+*This article contains affiliate links. See our [affiliate disclosure](/affiliate-disclosure/) for details.*
+
+</div>
 
 <div class="key-takeaways">
 
@@ -37,7 +43,7 @@ The first thing most women notice isn't hair loss. It's texture change. Hair tha
 
 This is the earliest sign of [mineral buildup from hard water](https://pubmed.ncbi.nlm.nih.gov/24688579/). Calcium and magnesium ions in the water bond to the hair shaft during every wash, creating a film that makes hair feel rough, heavy, and resistant to styling products. Your shampoo and conditioner aren't suddenly defective. They're working against a mineral barrier that didn't exist before you moved.
 
-What you can do: Switch to a chelating or clarifying shampoo once a week. This won't prevent buildup entirely, but it slows the accumulation. Look for ingredients like EDTA or citric acid on the label.
+What you can do: Switch to a chelating or clarifying shampoo once a week. Chelating shampoos like [Regrowth+](https://regrowthplus.com?utm_source=blog_007&utm_medium=editorial) are formulated specifically for hard water mineral removal. This won't prevent buildup entirely, but it slows the accumulation. Look for ingredients like EDTA or citric acid on the label.
 
 ## Month 2 to 4: The Dryness Phase
 

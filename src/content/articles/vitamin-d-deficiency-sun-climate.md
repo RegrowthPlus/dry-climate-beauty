@@ -10,8 +10,14 @@ heroAlt: "Sunlit window with supplement bottles on a kitchen counter"
 readingTime: 7
 tags: ["vitamin D", "deficiency", "sun", "Gulf", "supplements", "hair loss"]
 featured: false
-hasAffiliateLinks: false
+hasAffiliateLinks: true
 ---
+
+<div class="affiliate-disclosure">
+
+*This article contains affiliate links. See our [affiliate disclosure](/affiliate-disclosure/) for details.*
+
+</div>
 
 <div class="key-takeaways">
 
@@ -47,7 +53,7 @@ Fourth, melanin is a natural UVB filter. Women with darker skin tones require si
 
 Vitamin D receptors are present in hair follicles, and [research suggests they play a role in the hair growth cycle](https://pubmed.ncbi.nlm.nih.gov/30980598/). Several studies have found associations between low vitamin D levels and telogen effluvium, as well as female pattern hair loss.
 
-This doesn't mean vitamin D deficiency causes hair loss on its own. The relationship is more nuanced. Low vitamin D may make your follicles more vulnerable to other stressors, including the [hard water and climate factors](/hair-scalp/expat-hair-loss-timeline-first-year/) that are already working against your hair after relocation.
+This doesn't mean vitamin D deficiency causes hair loss on its own. The relationship is more nuanced. Low vitamin D may make your follicles more vulnerable to other stressors, including the [hard water and climate factors](/hair-scalp/expat-hair-loss-timeline-first-year/) that are already working against your hair after relocation. Addressing deficiency from the inside while using a topical chelating treatment like [Regrowth+](https://regrowthplus.com?utm_source=blog_007&utm_medium=editorial) to manage mineral buildup from the outside gives you the best chance of a meaningful improvement.
 
 A 2019 review in Dermatology and Therapy concluded that vitamin D supplementation may be beneficial for hair loss associated with deficiency, but noted that evidence for supplementation in people with normal vitamin D levels is limited.
 

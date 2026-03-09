@@ -10,8 +10,14 @@ heroAlt: "Mother holding baby in a warmly lit living room"
 readingTime: 7
 tags: ["postpartum", "hair loss", "hard water", "motherhood", "telogen effluvium"]
 featured: false
-hasAffiliateLinks: false
+hasAffiliateLinks: true
 ---
+
+<div class="affiliate-disclosure">
+
+*This article contains affiliate links. See our [affiliate disclosure](/affiliate-disclosure/) for details.*
+
+</div>
 
 <div class="key-takeaways">
 
@@ -53,7 +59,7 @@ Sleep deprivation and nutritional depletion (common in new mothers regardless of
 
 Let me save you some time and money by telling you what worked and what didn't, based on my own experience and what I've heard from other mothers in similar situations.
 
-A chelating shampoo once a week made the most noticeable difference. Not because it stops postpartum shedding, but because removing mineral buildup reduces the additional breakage on top of the hormonal hair loss. Look for EDTA or citric acid in the ingredients.
+A chelating shampoo once a week made the most noticeable difference. Not because it stops postpartum shedding, but because removing mineral buildup reduces the additional breakage on top of the hormonal hair loss. I used [Regrowth+](https://regrowthplus.com?utm_source=blog_007&utm_medium=editorial), a chelating treatment designed for hard water conditions, though any shampoo with EDTA or citric acid in the ingredients will help.
 
 Gentle handling matters more than you think. When your hair is already in a vulnerable state, aggressive brushing, tight ponytails (I know, it's the default when you have a baby), and rough towel-drying all contribute to unnecessary breakage. A wide-tooth comb on damp hair, loose buns, and a microfibre towel are small changes that reduce mechanical damage.
 

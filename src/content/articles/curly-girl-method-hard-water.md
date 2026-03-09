@@ -9,8 +9,14 @@ heroAlt: "Curly-haired woman running fingers through her hair in natural light"
 readingTime: 8
 tags: ["curly girl method", "CGM", "hard water", "curly hair", "mineral buildup", "sulfate-free"]
 featured: false
-hasAffiliateLinks: false
+hasAffiliateLinks: true
 ---
+
+<div class="affiliate-disclosure">
+
+*This article contains affiliate links. See our [affiliate disclosure](/affiliate-disclosure/) for details.*
+
+</div>
 
 <div class="key-takeaways">
 
@@ -56,7 +62,7 @@ I'm not suggesting you coat your hair in dimethicone and call it done. But the b
 
 After two years of trial and error, here's what works for me and for the other curly-haired women I've compared notes with in hard water climates.
 
-Use a chelating shampoo every 7 to 10 days. This is non-negotiable. A proper chelating shampoo with EDTA removes the mineral buildup that no amount of conditioning can address. Yes, it contains sulfates. Your curls will feel stripped immediately after, but that's because you're removing the mineral film. A deep condition afterward restores moisture to the actual hair shaft rather than coating the mineral layer.
+Use a chelating shampoo every 7 to 10 days. This is non-negotiable. A proper chelating shampoo with EDTA, such as [Regrowth+](https://regrowthplus.com?utm_source=blog_007&utm_medium=editorial) or similar chelating formulas, removes the mineral buildup that no amount of conditioning can address. Yes, it contains sulfates. Your curls will feel stripped immediately after, but that's because you're removing the mineral film. A deep condition afterward restores moisture to the actual hair shaft rather than coating the mineral layer.
 
 Allow water-soluble silicones. Not all silicones are the same. Water-soluble options like cyclomethicone and dimethicone copolyol provide some protective barrier without requiring heavy sulfate removal. They're a practical middle ground.
 
