@@ -1,6 +1,6 @@
 ---
 title: "Postpartum Hair Loss in the Gulf: Is the Local Water Making It Worse?"
-description: "Postpartum shedding is normal. But if you live in a hard water climate, the combination may be more severe than expected. Here is what's happening and what helps."
+description: "Postpartum shedding is normal, but hard water may make it worse than expected. Here is what helps."
 category: "motherhood"
 author: "nadia-serhan"
 reviewedBy: "dr-layla-hassan"
