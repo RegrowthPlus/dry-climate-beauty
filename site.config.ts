@@ -41,31 +41,37 @@ export const siteConfig = {
       name: "Hair & Scalp",
       slug: "hair-scalp",
       description: "Expat hair loss, hard water damage, curly hair care, and scalp health for women living in dry climates.",
+      megaMenuItems: ["Expat Hair Loss", "Curly Hair in Hard Water", "Mineral Buildup", "Scalp Health", "Telogen Effluvium"],
     },
     {
       name: "Skin & Body",
       slug: "skin-body",
       description: "Skin barrier repair, moisturiser guidance, sunscreen for extreme heat, and desalinated water effects on skin.",
+      megaMenuItems: ["Skin Barrier Repair", "Sunscreen for Heat", "Desalinated Water Effects", "Hard Water & Skin"],
     },
     {
       name: "Nutrition & Supplements",
       slug: "nutrition-supplements",
       description: "Vitamin D, biotin, omega-3, collagen, and hydration science. What the research actually shows.",
+      megaMenuItems: ["Vitamin D Deficiency", "Biotin Evidence", "Omega-3 & Hair", "Collagen Supplements", "Hydration Science"],
     },
     {
       name: "Expat Wellness",
       slug: "expat-wellness",
       description: "Stress, cortisol, climate adjustment, sleep, and the invisible health effects of relocating to a dry climate.",
+      megaMenuItems: ["Cortisol & Hair Loss", "Climate Adjustment", "Sleep & Stress", "Acclimatisation"],
     },
     {
       name: "Motherhood",
       slug: "motherhood",
       description: "Postpartum hair loss, baby skincare in hard water, toddler routines, and honest advice for exhausted parents.",
+      megaMenuItems: ["Postpartum Hair Loss", "Baby Skincare", "Toddler Shampoos", "Postpartum Nutrition"],
     },
     {
       name: "Ingredient Reviews",
       slug: "ingredient-reviews",
       description: "Chelating shampoos, clean beauty products, ingredient labels, and what actually works in harsh water conditions.",
+      megaMenuItems: ["Chelating Shampoos", "Clean Beauty Products", "Ingredient Labels", "Scalp Treatments"],
     },
   ],
 
