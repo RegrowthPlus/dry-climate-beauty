@@ -1,0 +1,108 @@
+---
+/**
+ * Homepage hero: Large featured article image (~60% width) + excerpt.
+ * Matches Healthline screenshot 01: big landscape image left, title below.
+ */
+interface Props {
+  title: string;
+  slug: string;
+  category: string;
+  categorySlug: string;
+  heroImage: string;
+  heroAlt: string;
+  description: string;
+}
+
+const { title, slug, category, categorySlug, heroImage, heroAlt, description } = Astro.props;
+const href = `/${categorySlug}/${slug}/`;
+---
+
+<article class="featured-hero">
+  <a href={href} class="hero-image-link">
+    <img
+      src={heroImage}
+      alt={heroAlt}
+      width="800"
+      height="450"
+      class="hero-image"
+    />
+  </a>
+  <div class="hero-body">
+    <a href={`/${categorySlug}/`} class="category-label">{category}</a>
+    <h2 class="hero-title">
+      <a href={href}>{title}</a>
+    </h2>
+    <p class="hero-excerpt">{description}</p>
+  </div>
+</article>
+
+<style>
+  .featured-hero {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-image-link {
+    display: block;
+    overflow: hidden;
+    border-radius: 0.5rem;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+
+  .hero-image-link:hover .hero-image {
+    transform: scale(1.02);
+  }
+
+  .hero-body {
+    padding-top: var(--space-lg);
+  }
+
+  .category-label {
+    display: inline-block;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    text-decoration: none;
+    margin-bottom: var(--space-sm);
+  }
+
+  .hero-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 var(--space-sm);
+  }
+
+  .hero-title a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .hero-title a:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .hero-excerpt {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media (min-width: 1025px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+  }
+</style>

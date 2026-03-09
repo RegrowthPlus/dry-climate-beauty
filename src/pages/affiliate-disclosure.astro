@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { siteConfig } from '../../site.config';
+---
+
+<BaseLayout title="Affiliate Disclosure" description={`How ${siteConfig.name} earns revenue through affiliate partnerships and how this affects our editorial process.`}>
+  <Header />
+
+  <main class="static-page">
+    <div class="container">
+      <Breadcrumbs items={[{ name: 'Affiliate Disclosure' }]} />
+
+      <h1>Affiliate Disclosure</h1>
+
+      <!-- SITE-SPECIFIC: Update with your actual affiliate relationships and programs -->
+      <section class="page-section">
+        <h2>How We Earn Revenue</h2>
+        <p>{siteConfig.name} is a free resource. To keep our content accessible to everyone, we participate in affiliate programs. This means that when you click certain links on our site and make a purchase, we may earn a commission at no additional cost to you.</p>
+      </section>
+
+      <section class="page-section">
+        <h2>What This Means for You</h2>
+        <ul>
+          <li>You never pay more by using our affiliate links. The price you see is the same whether you use our link or go directly to the retailer.</li>
+          <li>We only recommend products and services that we believe provide genuine value to our readers.</li>
+          <li>Affiliate relationships never influence our editorial opinions, ratings, or recommendations.</li>
+          <li>Articles containing affiliate links are clearly marked with a disclosure notice at the top.</li>
+        </ul>
+      </section>
+
+      <section class="page-section">
+        <h2>Editorial Independence</h2>
+        <p>Our editorial team evaluates products and services based on their merits, not their affiliate potential. Many of the products we review or mention do not have affiliate programs. We include them because they are relevant to our readers.</p>
+        <p>Product selections, ratings, and recommendations are made by our editorial team independently. Our business team does not participate in editorial decisions.</p>
+      </section>
+
+      <!-- SITE-SPECIFIC: List your actual affiliate programs -->
+      <section class="page-section">
+        <h2>Our Affiliate Partners</h2>
+        <p>We participate in affiliate programs with select retailers and service providers. These partnerships help fund our editorial operations while maintaining the quality and independence of our content.</p>
+      </section>
+
+      <section class="page-section">
+        <h2>FTC Compliance</h2>
+        <p>This disclosure is provided in accordance with the Federal Trade Commission's guidelines on endorsements and testimonials. We are committed to full transparency about our business relationships and how they may relate to our content.</p>
+        <p>If you have questions about our affiliate relationships, please contact us at <strong>editorial@example.com</strong>.</p>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .static-page {
+    padding: var(--space-xl) 0 var(--space-3xl);
+  }
+
+  h1 {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    margin-bottom: var(--space-xl);
+  }
+
+  .page-section {
+    margin-bottom: var(--space-2xl);
+    max-width: 700px;
+  }
+
+  .page-section h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .page-section p,
+  .page-section li {
+    color: var(--color-text);
+    line-height: 1.7;
+  }
+
+  .page-section ul {
+    padding-left: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  .page-section li {
+    margin-bottom: 0.5em;
+  }
+
+  @media (min-width: 1025px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+</style>

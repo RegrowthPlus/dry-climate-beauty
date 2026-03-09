@@ -1,0 +1,261 @@
+---
+/**
+ * Author profile page with Person schema and article listings.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import SchemaMarkup from '../../components/SchemaMarkup.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { siteConfig } from '../../../site.config';
+import { getCollection } from 'astro:content';
+import authors from '../../data/authors.json';
+import categories from '../../data/categories.json';
+
+export function getStaticPaths() {
+  return Object.entries(authors).map(([slug, author]) => ({
+    params: { slug },
+    props: { author: { ...(author as any), slug } },
+  }));
+}
+
+const { author } = Astro.props;
+
+const allArticles = await getCollection('articles', ({ data }) => !data.draft);
+
+const authoredArticles = allArticles
+  .filter(a => a.data.author === author.slug)
+  .sort((a, b) => b.data.publishedDate.getTime() - a.data.publishedDate.getTime());
+
+const reviewedArticles = allArticles
+  .filter(a => a.data.reviewedBy === author.slug && a.data.author !== author.slug)
+  .sort((a, b) => b.data.publishedDate.getTime() - a.data.publishedDate.getTime());
+
+function getCategoryName(slug: string): string {
+  return categories.find(c => c.slug === slug)?.name || slug;
+}
+
+const sameAs = [author.social?.linkedin].filter(Boolean);
+---
+
+<BaseLayout title={author.name} description={author.bio}>
+  <Fragment slot="head">
+    <SchemaMarkup type="Person" data={{
+      name: author.name,
+      title: author.title,
+      bio: author.bio,
+      slug: author.slug,
+      sameAs,
+    }} />
+  </Fragment>
+
+  <Header />
+
+  <main class="author-page">
+    <div class="container">
+      <Breadcrumbs items={[
+        { name: 'Authors', url: '/about/' },
+        { name: author.name },
+      ]} />
+
+      <div class="author-profile">
+        <img
+          src={author.photo}
+          alt={author.name}
+          width="120"
+          height="120"
+          class="author-photo"
+          loading="eager"
+        />
+        <div class="author-details">
+          <h1>{author.name}</h1>
+          <p class="author-title">{author.title}</p>
+          <p class="author-credentials">{author.credentials}</p>
+
+          {author.expertise && author.expertise.length > 0 && (
+            <div class="expertise-tags">
+              {author.expertise.map((area: string) => (
+                <span class="expertise-tag">{area}</span>
+              ))}
+            </div>
+          )}
+
+          <p class="author-bio">{author.bio}</p>
+
+          {author.isReviewer && (
+            <p class="reviewer-disclaimer">
+              {author.name} serves as a medical reviewer for {siteConfig.name}. Medical review involves evaluating articles for clinical accuracy but does not constitute personal medical advice or endorsement of specific products.
+            </p>
+          )}
+        </div>
+      </div>
+
+      {authoredArticles.length > 0 && (
+        <section class="author-articles">
+          <h2>Articles by {author.name}</h2>
+          <div class="article-grid">
+            {authoredArticles.map((article) => (
+              <ArticleCard
+                title={article.data.title}
+                slug={article.slug}
+                category={getCategoryName(article.data.category)}
+                categorySlug={article.data.category}
+                heroImage={article.data.heroImage}
+                heroAlt={article.data.heroAlt}
+                description={article.data.description}
+                date={article.data.publishedDate}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {reviewedArticles.length > 0 && (
+        <section class="author-articles">
+          <h2>Articles Reviewed by {author.name}</h2>
+          <div class="article-grid">
+            {reviewedArticles.map((article) => (
+              <ArticleCard
+                title={article.data.title}
+                slug={article.slug}
+                category={getCategoryName(article.data.category)}
+                categorySlug={article.data.category}
+                heroImage={article.data.heroImage}
+                heroAlt={article.data.heroAlt}
+                description={article.data.description}
+                date={article.data.publishedDate}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .author-page {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-3xl);
+  }
+
+  .author-profile {
+    display: flex;
+    gap: var(--space-xl);
+    align-items: flex-start;
+    max-width: 700px;
+    margin-bottom: var(--space-3xl);
+    padding-bottom: var(--space-xl);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .author-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .author-details h1 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 0 0 var(--space-xs);
+  }
+
+  .author-title {
+    font-size: 1.0625rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+  }
+
+  .author-credentials {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+  }
+
+  .expertise-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-md);
+  }
+
+  .expertise-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid var(--color-border);
+    border-radius: 2rem;
+    color: var(--color-text-muted);
+  }
+
+  .author-bio {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    margin-bottom: var(--space-md);
+  }
+
+  .reviewer-disclaimer {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    border-left: 3px solid var(--color-border);
+    padding-left: var(--space-md);
+    margin: 0;
+  }
+
+  .author-articles {
+    margin-bottom: var(--space-3xl);
+  }
+
+  .author-articles h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: var(--space-xl);
+  }
+
+  .article-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  @media (max-width: 768px) {
+    .author-profile {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .expertise-tags {
+      justify-content: center;
+    }
+
+    .reviewer-disclaimer {
+      border-left: none;
+      padding-left: 0;
+      text-align: left;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .article-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .article-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

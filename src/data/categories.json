@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Hard Water",
+    "slug": "hard-water",
+    "description": "Understanding hard water effects on hair, scalp, and skin in the Gulf region.",
+    "intro": "Hard water is one of the most overlooked causes of hair damage in the Gulf region. With dissolved minerals like calcium and magnesium at levels 3-5 times higher than European averages, understanding water quality is essential for maintaining healthy hair. Our evidence-based guides cover everything from water testing to effective solutions."
+  },
+  {
+    "name": "Hair Nutrition",
+    "slug": "hair-nutrition",
+    "description": "Evidence-based guidance on nutrients, ingredients, and dietary factors for hair health.",
+    "intro": "What you eat directly impacts the health and growth of your hair. Our research-backed articles explore the vitamins, minerals, and dietary patterns that support strong, resilient hair from the inside out. We separate fact from marketing fiction so you can make informed choices."
+  },
+  {
+    "name": "Hair Growth",
+    "slug": "hair-growth",
+    "description": "Research-backed treatments, solutions, and products for hair growth.",
+    "intro": "Hair growth is influenced by genetics, environment, nutrition, and the products you use. We review treatments and products through the lens of published research, helping you understand what actually works and what's just clever marketing."
+  },
+  {
+    "name": "Scalp Health",
+    "slug": "scalp-health",
+    "description": "Scalp conditions, treatments, and maintenance for healthy hair foundations.",
+    "intro": "A healthy scalp is the foundation of healthy hair. From dandruff and buildup to chelating treatments and pH balance, our guides help you understand and address common scalp concerns with evidence-based solutions."
+  }
+]

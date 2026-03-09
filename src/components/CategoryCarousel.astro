@@ -1,0 +1,115 @@
+---
+/**
+ * "Explore by health topic" horizontal scroll cards.
+ * Matches Healthline screenshot 02: portrait cards with colored top backgrounds,
+ * category name below. Horizontally scrollable on mobile.
+ */
+import { siteConfig } from '../../site.config';
+
+const categories = siteConfig.categories;
+---
+
+<section class="category-carousel">
+  <div class="container">
+    <div class="carousel-header">
+      <h2>Explore by health topic</h2>
+    </div>
+    <div class="carousel-track">
+      {categories.map((cat, i) => (
+        <a href={`/${cat.slug}/`} class="carousel-card">
+          <div class:list={['card-visual', `color-${i % 2 === 0 ? 'primary' : 'light'}`]}>
+            <span class="card-icon">{cat.name.charAt(0)}</span>
+          </div>
+          <span class="card-name">{cat.name}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .category-carousel {
+    padding: var(--space-3xl) 0;
+  }
+
+  .carousel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-xl);
+  }
+
+  .carousel-header h2 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    margin: 0;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: var(--space-lg);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: var(--space-md);
+    scrollbar-width: none;
+  }
+
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-card {
+    flex: 0 0 calc(25% - 1.125rem);
+    min-width: 200px;
+    scroll-snap-align: start;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .card-visual {
+    aspect-ratio: 3 / 4;
+    border-radius: 1rem 1rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-md);
+    transition: transform 0.3s;
+  }
+
+  .carousel-card:hover .card-visual {
+    transform: translateY(-4px);
+  }
+
+  .color-primary {
+    background: var(--color-primary);
+  }
+
+  .color-light {
+    background: #b2dfdb;
+  }
+
+  .card-icon {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: white;
+    opacity: 0.3;
+  }
+
+  .card-name {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .carousel-card:hover .card-name {
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 768px) {
+    .carousel-card {
+      flex: 0 0 160px;
+    }
+  }
+</style>

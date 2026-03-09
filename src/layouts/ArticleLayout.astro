@@ -1,0 +1,400 @@
+---
+/**
+ * Article layout — variant-aware.
+ * Healthline: Category label + "Fact Checked" badge, serif H1, hero image,
+ *   right sidebar with author card + newsletter CTA.
+ * Wirecutter: Breadcrumbs, H1, updated date, share row, hero, author inline,
+ *   single-column 720px, brass-accent blockquotes/pull quotes.
+ */
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
+import AuthorCard from '../components/AuthorCard.astro';
+import NewsletterCTA from '../components/NewsletterCTA.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import SchemaMarkup from '../components/SchemaMarkup.astro';
+import ReadingProgress from '../components/ReadingProgress.astro';
+import SocialShare from '../components/SocialShare.astro';
+import { siteConfig } from '../../site.config';
+import categories from '../data/categories.json';
+import authors from '../data/authors.json';
+
+const isWirecutter = siteConfig.variant === 'wirecutter';
+
+interface Props {
+  title: string;
+  description: string;
+  category: string;
+  author: string;
+  publishedDate: Date;
+  updatedDate?: Date;
+  heroImage: string;
+  heroAlt: string;
+  readingTime?: number;
+  reviewedBy?: string;
+  tags?: string[];
+  slug: string;
+  faqItems?: { question: string; answer: string }[];
+  hasAffiliateLinks?: boolean;
+  headings?: { depth: number; slug: string; text: string }[];
+}
+
+const {
+  title,
+  description,
+  category,
+  author: authorSlug,
+  publishedDate,
+  updatedDate,
+  heroImage,
+  heroAlt,
+  readingTime,
+  reviewedBy,
+  tags = [],
+  slug,
+  faqItems,
+  hasAffiliateLinks,
+  headings = [],
+} = Astro.props;
+
+const categoryData = categories.find(c => c.slug === category);
+const categoryName = categoryData?.name || category;
+const authorData = (authors as Record<string, any>)[authorSlug];
+const canonicalUrl = `${siteConfig.domain}/${category}/${slug}/`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  heroImage={heroImage}
+  type="article"
+>
+  <Fragment slot="head">
+    <SchemaMarkup type="BlogPosting" data={{
+      title,
+      description,
+      heroImage,
+      publishedDate: publishedDate.toISOString(),
+      updatedDate: updatedDate?.toISOString(),
+      authorName: authorData?.name || authorSlug,
+      authorSlug,
+      category,
+      slug,
+    }} />
+    {faqItems && faqItems.length > 0 && (
+      <SchemaMarkup type="FAQPage" data={{ items: faqItems }} />
+    )}
+    {heroImage && <link rel="preload" as="image" href={heroImage} />}
+  </Fragment>
+
+  <ReadingProgress />
+  <Header />
+
+  <main class:list={['article-page', { 'wc-article': isWirecutter }]}>
+    <div class="container">
+      <div class="article-header">
+        <Breadcrumbs items={[
+          { name: categoryName, url: `/${category}/` },
+          { name: title },
+        ]} />
+
+        {hasAffiliateLinks && <AffiliateDisclosure />}
+
+        {!isWirecutter && (
+          <div class="article-meta-row">
+            <a href={`/${category}/`} class="category-label">{categoryName}</a>
+            {reviewedBy && (
+              <span class="fact-checked-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Fact Checked
+              </span>
+            )}
+          </div>
+        )}
+
+        <h1>{title}</h1>
+
+        {isWirecutter && updatedDate && (
+          <p class="wc-updated-date">Updated {new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' }).format(updatedDate)}</p>
+        )}
+        {isWirecutter && !updatedDate && (
+          <p class="wc-updated-date">Published {new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' }).format(publishedDate)}</p>
+        )}
+      </div>
+
+      {isWirecutter && (
+        <SocialShare url={canonicalUrl} title={title} />
+      )}
+
+      <div class:list={['article-grid', { 'wc-single-col': isWirecutter }]}>
+        <div class="article-main">
+          <img
+            src={heroImage}
+            alt={heroAlt}
+            width="700"
+            height="394"
+            class="hero-image"
+          />
+
+          {isWirecutter && authorData && (
+            <div class="wc-author-inline">
+              <img src={authorData.photo} alt={authorData.name} width="48" height="48" class="wc-author-photo" loading="lazy" />
+              <div>
+                <p class="wc-author-name">By <a href={`/authors/${authorSlug}/`}>{authorData.name}</a></p>
+                {authorData.credentials && <p class="wc-author-creds">{authorData.credentials}</p>}
+              </div>
+            </div>
+          )}
+
+          {headings.length > 0 && (
+            <div class="toc-mobile">
+              <TableOfContents headings={headings} />
+            </div>
+          )}
+
+          <div class="article-content">
+            <slot />
+          </div>
+
+          {!isWirecutter && <SocialShare url={canonicalUrl} title={title} />}
+
+          {tags.length > 0 && (
+            <div class="article-tags">
+              <h3>Related Topics</h3>
+              <div class="tag-list">
+                {tags.map(tag => (
+                  <span class="tag-chip">{tag}</span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {!isWirecutter && (
+          <aside class="article-sidebar">
+            {headings.length > 0 && (
+              <div class="toc-desktop">
+                <TableOfContents headings={headings} />
+              </div>
+            )}
+            <AuthorCard
+              authorSlug={authorSlug}
+              publishedDate={publishedDate}
+              reviewedBySlug={reviewedBy}
+            />
+            <NewsletterCTA />
+          </aside>
+        )}
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .article-page {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-3xl);
+  }
+
+  .article-header {
+    max-width: 700px;
+    margin-bottom: var(--space-xl);
+  }
+
+  .article-meta-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+  }
+
+  .category-label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .fact-checked-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+    border-radius: 2rem;
+    padding: 0.25rem 0.75rem;
+  }
+
+  .fact-checked-badge svg {
+    color: var(--color-primary);
+  }
+
+  h1 {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .article-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+
+  .article-main {
+    max-width: 700px;
+  }
+
+  .toc-mobile {
+    margin-bottom: var(--space-xl);
+  }
+
+  .toc-desktop {
+    display: none;
+    margin-bottom: var(--space-xl);
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--card-radius);
+    margin-bottom: var(--space-xl);
+  }
+
+  .article-tags {
+    margin-top: var(--space-3xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .article-tags h3 {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .tag-chip {
+    display: inline-block;
+    padding: 0.375rem 1rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    border: 1px solid var(--color-border);
+    border-radius: 2rem;
+    color: var(--color-text-muted);
+  }
+
+  .article-sidebar {
+    display: none;
+  }
+
+  @media (min-width: 1025px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .article-grid {
+      grid-template-columns: 1fr 300px;
+    }
+
+    .article-sidebar {
+      display: block;
+      position: sticky;
+      top: 80px;
+      align-self: start;
+    }
+
+    .toc-mobile {
+      display: none;
+    }
+
+    .toc-desktop {
+      display: block;
+    }
+  }
+
+  /* Wirecutter variant overrides */
+  .wc-article .article-header {
+    max-width: 720px;
+  }
+
+  .wc-updated-date {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-top: var(--space-sm);
+  }
+
+  .wc-single-col {
+    grid-template-columns: 1fr !important;
+    max-width: 720px;
+  }
+
+  .wc-single-col .article-main {
+    max-width: 720px;
+  }
+
+  .wc-author-inline {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-divider);
+  }
+
+  .wc-author-photo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .wc-author-name {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .wc-author-name a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .wc-author-name a:hover {
+    text-decoration: underline;
+  }
+
+  .wc-author-creds {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  /* Wirecutter blockquote / pull quote: brass left border */
+  .wc-article .article-content blockquote {
+    border-left: 4px solid var(--color-accent);
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--color-text);
+    padding: var(--space-md) var(--space-lg);
+    margin: var(--space-xl) 0;
+    background: none;
+  }
+</style>

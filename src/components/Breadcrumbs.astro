@@ -1,0 +1,81 @@
+---
+import SchemaMarkup from './SchemaMarkup.astro';
+
+interface BreadcrumbItem {
+  name: string;
+  url?: string;
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+
+const allItems = [
+  { name: 'Home', url: '/' },
+  ...items,
+];
+---
+
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+  <ol>
+    {allItems.map((item, i) => (
+      <li>
+        {i > 0 && <span class="separator" aria-hidden="true">&rsaquo;</span>}
+        {item.url && i < allItems.length - 1 ? (
+          <a href={item.url}>{item.name}</a>
+        ) : (
+          <span aria-current={i === allItems.length - 1 ? 'page' : undefined}>{item.name}</span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<SchemaMarkup type="BreadcrumbList" data={{ items: allItems }} />
+
+<style>
+  .breadcrumbs {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+  }
+
+  ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+
+  .separator {
+    color: var(--color-border);
+    font-size: 1rem;
+  }
+
+  [aria-current="page"] {
+    color: var(--color-text);
+  }
+</style>

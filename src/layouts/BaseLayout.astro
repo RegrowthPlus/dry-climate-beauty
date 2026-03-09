@@ -1,0 +1,87 @@
+---
+import { siteConfig } from '../../site.config';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  heroImage?: string;
+  heroAlt?: string;
+  canonicalUrl?: string;
+  noindex?: boolean;
+  type?: 'website' | 'article';
+}
+
+const {
+  title,
+  description = siteConfig.tagline,
+  heroImage,
+  canonicalUrl,
+  noindex = false,
+  type = 'website',
+} = Astro.props;
+
+const pageTitle = `${title} | ${siteConfig.name}`;
+const currentUrl = new URL(Astro.url.pathname, siteConfig.domain).href;
+const canonical = canonicalUrl || currentUrl;
+const ogImage = heroImage ? `${siteConfig.domain}${heroImage}` : '';
+const variant = siteConfig.variant || 'healthline';
+const isWirecutter = variant === 'wirecutter';
+---
+
+<!DOCTYPE html>
+<html lang={siteConfig.language} data-variant={variant}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Title & Description -->
+  <title>{pageTitle}</title>
+  <meta name="description" content={description} />
+
+  <!-- Canonical -->
+  <link rel="canonical" href={canonical} />
+  {noindex && <meta name="robots" content="noindex, follow" />}
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content={type} />
+  <meta property="og:url" content={currentUrl} />
+  {ogImage && <meta property="og:image" content={ogImage} />}
+  <meta property="og:site_name" content={siteConfig.name} />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  {ogImage && <meta name="twitter:image" content={ogImage} />}
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title={siteConfig.name} href="/rss.xml" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Font Preloading -->
+  {isWirecutter ? (
+    <>
+      <link rel="preload" as="font" type="font/woff2" href="/fonts/source-sans-3-normal.woff2" crossorigin />
+      <link rel="preload" as="font" type="font/woff2" href="/fonts/playfair-display-700.woff2" crossorigin />
+    </>
+  ) : (
+    <>
+      <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-var.woff2" crossorigin />
+      <link rel="preload" as="font" type="font/woff2" href="/fonts/dm-serif-display-regular.woff2" crossorigin />
+    </>
+  )}
+
+  <!-- Schema markup slot -->
+  <slot name="head" />
+</head>
+<body>
+  <slot name="before-content" />
+  <slot />
+  <slot name="after-content" />
+</body>
+</html>

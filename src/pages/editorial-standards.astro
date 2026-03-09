@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { siteConfig } from '../../site.config';
+---
+
+<BaseLayout title="Editorial Standards" description={`How ${siteConfig.name} ensures accuracy, independence, and transparency in every article.`}>
+  <Header />
+
+  <main class="static-page">
+    <div class="container">
+      <Breadcrumbs items={[{ name: 'Editorial Standards' }]} />
+
+      <h1>Editorial Standards</h1>
+
+      <!-- SITE-SPECIFIC: Customize the editorial process to match your team's actual workflow -->
+      <section class="page-section">
+        <h2>Our Editorial Process</h2>
+        <p>Every article published on {siteConfig.name} follows a structured editorial process designed to ensure accuracy, clarity, and usefulness.</p>
+        <ol>
+          <li><strong>Research</strong> — Our writers begin by reviewing the latest peer-reviewed literature, clinical guidelines, and expert sources on the topic.</li>
+          <li><strong>Writing</strong> — Articles are written in clear, accessible language. We avoid jargon and explain technical terms when they are necessary.</li>
+          <li><strong>Fact-checking</strong> — All factual claims are verified against primary sources. Statistics, study results, and medical information are double-checked.</li>
+          <li><strong>Expert review</strong> — Where indicated, articles are reviewed by a qualified professional for clinical accuracy.</li>
+          <li><strong>Publication</strong> — Articles are published with clear attribution, source links, and review dates.</li>
+        </ol>
+      </section>
+
+      <!-- SITE-SPECIFIC: Adjust the review process description for your team -->
+      <section class="page-section">
+        <h2>Medical Review</h2>
+        <p>Articles covering medical or clinical topics are reviewed by qualified health professionals. Medical review involves evaluating the article for:</p>
+        <ul>
+          <li>Clinical accuracy of health claims</li>
+          <li>Appropriate context for research findings</li>
+          <li>Clear distinction between established science and emerging research</li>
+          <li>Balanced presentation of treatment options and their limitations</li>
+        </ul>
+        <p>Medical review does not constitute personal medical advice. Readers should consult their healthcare provider for individualized guidance.</p>
+      </section>
+
+      <section class="page-section">
+        <h2>Editorial Independence</h2>
+        <p>Our editorial team operates independently from our business relationships. Advertisers and affiliate partners have no influence over:</p>
+        <ul>
+          <li>Which topics we cover</li>
+          <li>What conclusions our articles reach</li>
+          <li>Which products or treatments we recommend</li>
+          <li>The content of our reviews or comparisons</li>
+        </ul>
+      </section>
+
+      <section class="page-section">
+        <h2>Corrections Policy</h2>
+        <p>We take accuracy seriously. If an error is identified in a published article, we will:</p>
+        <ul>
+          <li>Correct the error promptly</li>
+          <li>Note the correction at the bottom of the article with the date and nature of the change</li>
+          <li>Update the "last updated" date</li>
+        </ul>
+        <!-- SITE-SPECIFIC: Replace with your actual corrections contact -->
+        <p>To report an error, contact us at <strong>corrections@example.com</strong>.</p>
+      </section>
+
+      <section class="page-section">
+        <h2>Content Updates</h2>
+        <p>Health information evolves as new research is published. We periodically review and update our articles to reflect the latest evidence. Updated articles display a "last updated" date alongside the original publication date.</p>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .static-page {
+    padding: var(--space-xl) 0 var(--space-3xl);
+  }
+
+  h1 {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    margin-bottom: var(--space-xl);
+  }
+
+  .page-section {
+    margin-bottom: var(--space-2xl);
+    max-width: 700px;
+  }
+
+  .page-section h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .page-section p,
+  .page-section li {
+    color: var(--color-text);
+    line-height: 1.7;
+  }
+
+  .page-section ul,
+  .page-section ol {
+    padding-left: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  .page-section li {
+    margin-bottom: 0.5em;
+  }
+
+  @media (min-width: 1025px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+</style>

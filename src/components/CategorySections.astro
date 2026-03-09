@@ -1,0 +1,119 @@
+---
+/**
+ * Wirecutter-variant category section blocks for homepage.
+ * Each category gets a thick top-border, H2 heading, and card grid.
+ */
+import ArticleCard from './ArticleCard.astro';
+
+interface ArticleItem {
+  title: string;
+  slug: string;
+  category: string;
+  categorySlug: string;
+  heroImage: string;
+  heroAlt: string;
+  description?: string;
+  date?: Date;
+  readingTime?: number;
+}
+
+interface CategoryGroup {
+  name: string;
+  slug: string;
+  articles: ArticleItem[];
+}
+
+interface Props {
+  categories: CategoryGroup[];
+}
+
+const { categories } = Astro.props;
+---
+
+{categories.map((cat) => (
+  <section class="category-section">
+    <div class="container">
+      <div class="category-section-header">
+        <h2><a href={`/${cat.slug}/`}>{cat.name}</a></h2>
+        <a href={`/${cat.slug}/`} class="view-all-link">View all &rarr;</a>
+      </div>
+      <div class="category-section-grid">
+        {cat.articles.map((article) => (
+          <ArticleCard
+            title={article.title}
+            slug={article.slug}
+            category={cat.name}
+            categorySlug={cat.slug}
+            heroImage={article.heroImage}
+            heroAlt={article.heroAlt}
+            description={article.description}
+            date={article.date}
+            readingTime={article.readingTime}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+))}
+
+<style>
+  .category-section {
+    padding: var(--space-2xl) 0;
+    border-top: 3px solid var(--color-text);
+  }
+
+  .category-section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: var(--space-xl);
+  }
+
+  .category-section-header h2 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .category-section-header h2 a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .category-section-header h2 a:hover {
+    color: var(--color-accent, var(--color-primary));
+    text-decoration: none;
+  }
+
+  .view-all-link {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .view-all-link:hover {
+    color: var(--color-accent, var(--color-primary));
+    text-decoration: none;
+  }
+
+  .category-section-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  @media (min-width: 769px) {
+    .category-section-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .category-section-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>

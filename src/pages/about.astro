@@ -1,0 +1,160 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import SchemaMarkup from '../components/SchemaMarkup.astro';
+import { siteConfig } from '../../site.config';
+import authors from '../data/authors.json';
+---
+
+<BaseLayout title="About Us" description={`Learn about ${siteConfig.name}, our mission, and the team behind our evidence-based health content.`}>
+  <Fragment slot="head">
+    <SchemaMarkup type="Organization" data={{}} />
+  </Fragment>
+
+  <Header />
+
+  <main class="static-page">
+    <div class="container">
+      <Breadcrumbs items={[{ name: 'About Us' }]} />
+
+      <h1>About {siteConfig.name}</h1>
+
+      <!-- SITE-SPECIFIC: Replace with your actual publication story and mission -->
+      <section class="page-section">
+        <h2>Our Mission</h2>
+        <p>We believe everyone deserves access to clear, research-backed health information they can trust. Our team of writers, researchers, and medical reviewers works to translate complex scientific literature into practical guidance you can use in your daily life.</p>
+        <p>Every article we publish goes through a rigorous editorial process. We cite primary sources, consult peer-reviewed research, and have our content reviewed by qualified professionals before publication.</p>
+      </section>
+
+      <!-- SITE-SPECIFIC: Replace with your actual editorial approach -->
+      <section class="page-section">
+        <h2>What Sets Us Apart</h2>
+        <ul>
+          <li><strong>Evidence-based content</strong> — We cite peer-reviewed studies and clinical research, not marketing claims.</li>
+          <li><strong>Expert review</strong> — Our articles are reviewed by qualified health professionals for accuracy.</li>
+          <li><strong>Editorial independence</strong> — Our editorial team operates independently from our business relationships.</li>
+          <li><strong>Transparent sourcing</strong> — We link to our sources so you can verify the information yourself.</li>
+        </ul>
+      </section>
+
+      <section class="page-section">
+        <h2>Our Team</h2>
+        <div class="team-grid">
+          {Object.values(authors).map((author: any) => (
+            <div class="team-member">
+              <img src={author.photo} alt={author.name} width="80" height="80" class="team-photo" loading="lazy" />
+              <div class="team-info">
+                <h3><a href={`/authors/${author.slug}/`}>{author.name}</a></h3>
+                <p class="team-title">{author.title}</p>
+                <p class="team-credentials">{author.credentials}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- SITE-SPECIFIC: Replace with your actual contact information -->
+      <section class="page-section">
+        <h2>Contact Us</h2>
+        <p>Have a question, correction, or suggestion? We welcome feedback from our readers. Reach out to our editorial team at <strong>editorial@example.com</strong>.</p>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .static-page {
+    padding: var(--space-xl) 0 var(--space-3xl);
+  }
+
+  h1 {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    margin-bottom: var(--space-xl);
+  }
+
+  .page-section {
+    margin-bottom: var(--space-2xl);
+    max-width: 700px;
+  }
+
+  .page-section h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .page-section p,
+  .page-section li {
+    color: var(--color-text);
+    line-height: 1.7;
+  }
+
+  .page-section ul {
+    padding-left: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  .page-section li {
+    margin-bottom: 0.75em;
+  }
+
+  .team-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .team-member {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+  }
+
+  .team-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .team-info h3 {
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    font-weight: 700;
+    margin: 0 0 var(--space-xs);
+  }
+
+  .team-info h3 a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .team-info h3 a:hover {
+    color: var(--color-primary);
+  }
+
+  .team-title {
+    font-size: 0.875rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+  }
+
+  .team-credentials {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  @media (min-width: 1025px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+</style>

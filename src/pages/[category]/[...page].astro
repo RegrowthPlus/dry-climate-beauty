@@ -1,0 +1,148 @@
+---
+/**
+ * Category archive with pagination.
+ * /{category}/ shows page 1, /{category}/2/ shows page 2, etc.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import Pagination from '../../components/Pagination.astro';
+import { getCollection } from 'astro:content';
+import categories from '../../data/categories.json';
+
+export async function getStaticPaths() {
+  const POSTS_PER_PAGE = 10;
+  const allArticles = await getCollection('articles', ({ data }) => !data.draft);
+
+  const paths: any[] = [];
+
+  for (const cat of categories) {
+    const catArticles = allArticles
+      .filter(a => a.data.category === cat.slug)
+      .sort((a, b) => b.data.publishedDate.getTime() - a.data.publishedDate.getTime());
+
+    const totalPages = Math.max(1, Math.ceil(catArticles.length / POSTS_PER_PAGE));
+
+    for (let page = 1; page <= totalPages; page++) {
+      const start = (page - 1) * POSTS_PER_PAGE;
+      const articles = catArticles.slice(start, start + POSTS_PER_PAGE);
+
+      paths.push({
+        params: {
+          category: cat.slug,
+          page: page === 1 ? undefined : String(page),
+        },
+        props: {
+          articles,
+          categoryData: cat,
+          currentPage: page,
+          totalPages,
+        },
+      });
+    }
+  }
+
+  return paths;
+}
+
+const { articles, categoryData, currentPage, totalPages } = Astro.props;
+---
+
+<BaseLayout
+  title={`${categoryData.name}${currentPage > 1 ? ` — Page ${currentPage}` : ''}`}
+  description={categoryData.description}
+>
+  <Header />
+
+  <main class="archive-page">
+    <div class="container">
+      <Breadcrumbs items={[{ name: categoryData.name }]} />
+
+      <div class="archive-header">
+        <h1>{categoryData.name}</h1>
+        {categoryData.intro && <p class="archive-intro">{categoryData.intro}</p>}
+      </div>
+
+      {articles.length > 0 ? (
+        <div class="article-grid">
+          {articles.map((article: any) => (
+            <ArticleCard
+              title={article.data.title}
+              slug={article.slug}
+              category={categoryData.name}
+              categorySlug={article.data.category}
+              heroImage={article.data.heroImage}
+              heroAlt={article.data.heroAlt}
+              description={article.data.description}
+              date={article.data.publishedDate}
+            />
+          ))}
+        </div>
+      ) : (
+        <p class="no-articles">No articles in this category yet.</p>
+      )}
+
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        baseUrl={`/${categoryData.slug}`}
+      />
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .archive-page {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-3xl);
+  }
+
+  .archive-header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .archive-header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    line-height: 1.2;
+    margin: 0 0 var(--space-md);
+  }
+
+  .archive-intro {
+    font-size: 1.0625rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    max-width: 700px;
+  }
+
+  .article-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .no-articles {
+    color: var(--color-text-muted);
+    font-size: 1.0625rem;
+  }
+
+  @media (min-width: 768px) {
+    .article-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .archive-header h1 {
+      font-size: 2.5rem;
+    }
+
+    .article-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

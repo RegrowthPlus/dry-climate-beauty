@@ -1,0 +1,376 @@
+---
+import { siteConfig } from '../../site.config';
+
+const categories = siteConfig.categories;
+const currentPath = Astro.url.pathname;
+const isWirecutter = siteConfig.variant === 'wirecutter';
+---
+
+<header class:list={['site-header', { 'wc-header': isWirecutter }]}>
+  <div class="header-inner container">
+    <a href="/" class="logo">
+      <span class="logo-text">{siteConfig.name}</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        {categories.map((cat) => (
+          <li class:list={['nav-item', { 'has-mega-menu': !isWirecutter }]}>
+            <a
+              href={`/${cat.slug}/`}
+              class:list={['nav-link', { active: currentPath.startsWith(`/${cat.slug}/`) || currentPath === `/${cat.slug}` }]}
+            >
+              {cat.name}
+              {!isWirecutter && (
+                <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              )}
+            </a>
+            {!isWirecutter && (
+              <div class="mega-menu">
+                <div class="mega-menu-inner">
+                  <div class="mega-menu-main">
+                    <div class="mega-menu-header">
+                      <h3>{cat.name}</h3>
+                      <a href={`/${cat.slug}/`} class="view-all">All <span>&rarr;</span></a>
+                    </div>
+                    <div class="mega-menu-divider"></div>
+                    <ul class="mega-menu-links">
+                      {cat.megaMenuItems.map((item) => (
+                        <li><a href={`/${cat.slug}/`}>{item}</a></li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div class="mega-menu-description">
+                    <p>{cat.description}</p>
+                  </div>
+                </div>
+              </div>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    {isWirecutter && (
+      <a href="#newsletter" class="subscribe-cta">Subscribe</a>
+    )}
+
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+
+  <!-- Mobile navigation -->
+  <nav class="mobile-nav" aria-label="Mobile navigation" hidden>
+    <ul class="mobile-nav-list">
+      {categories.map((cat) => (
+        <li>
+          <a href={`/${cat.slug}/`} class="mobile-nav-link">{cat.name}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  hamburger?.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', String(!expanded));
+    hamburger.classList.toggle('is-open');
+    if (mobileNav) {
+      mobileNav.hidden = expanded;
+    }
+  });
+</script>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .logo {
+    text-decoration: none;
+    color: var(--color-text);
+  }
+
+  .logo-text {
+    font-family: var(--font-heading);
+    font-size: clamp(1.125rem, 4vw, 1.5rem);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  /* Desktop nav */
+  .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-item {
+    position: relative;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 1rem;
+    height: 64px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .chevron {
+    width: 12px;
+    height: 12px;
+    transition: transform 0.2s;
+  }
+
+  /* Mega menu */
+  .mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 500px;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-top: 3px solid var(--color-primary);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    padding: var(--space-xl);
+    z-index: 200;
+  }
+
+  .nav-item:hover .mega-menu {
+    display: block;
+  }
+
+  .nav-item:hover .chevron {
+    transform: rotate(180deg);
+  }
+
+  .mega-menu-inner {
+    display: flex;
+    gap: var(--space-xl);
+  }
+
+  .mega-menu-main {
+    flex: 1;
+  }
+
+  .mega-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-sm);
+  }
+
+  .mega-menu-header h3 {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .view-all {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .view-all:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .mega-menu-divider {
+    height: 2px;
+    background: var(--color-primary);
+    margin-bottom: var(--space-lg);
+  }
+
+  .mega-menu-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .mega-menu-links a {
+    color: var(--color-text);
+    font-size: 0.9375rem;
+    text-decoration: none;
+    padding: var(--space-xs) 0;
+  }
+
+  .mega-menu-links a:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .mega-menu-description {
+    flex: 0 0 200px;
+    padding-top: 2.5rem;
+  }
+
+  .mega-menu-description p {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .hamburger-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--color-text);
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  .hamburger.is-open .hamburger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .hamburger.is-open .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.is-open .hamburger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Mobile nav */
+  .mobile-nav {
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  .mobile-nav-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .mobile-nav-link {
+    display: block;
+    padding: var(--space-sm) 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .mobile-nav-link:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  /* Wirecutter variant overrides */
+  .wc-header {
+    border-bottom: 2px solid var(--color-text);
+  }
+
+  .wc-header .logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .wc-header .nav-link {
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: none;
+  }
+
+  .subscribe-cta {
+    display: none;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s;
+  }
+
+  .subscribe-cta:hover {
+    background: var(--color-primary-dark);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .main-nav {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    .subscribe-cta {
+      display: none;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .subscribe-cta {
+      display: inline-block;
+    }
+  }
+</style>

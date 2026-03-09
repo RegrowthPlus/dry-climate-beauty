@@ -1,0 +1,216 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import TrustBanner from '../components/TrustBanner.astro';
+import FeaturedHero from '../components/FeaturedHero.astro';
+import TrendingSidebar from '../components/TrendingSidebar.astro';
+import CategoryCarousel from '../components/CategoryCarousel.astro';
+import RecommendedReads from '../components/RecommendedReads.astro';
+import WirecutterHero from '../components/WirecutterHero.astro';
+import CategorySections from '../components/CategorySections.astro';
+import { siteConfig } from '../../site.config';
+import { getCollection } from 'astro:content';
+import categories from '../data/categories.json';
+import authors from '../data/authors.json';
+
+const isWirecutter = siteConfig.variant === 'wirecutter';
+
+const allArticles = await getCollection('articles', ({ data }) => !data.draft);
+const sorted = [...allArticles].sort(
+  (a, b) => b.data.publishedDate.getTime() - a.data.publishedDate.getTime()
+);
+
+// Find category name from slug
+function getCategoryName(slug: string): string {
+  const cat = categories.find(c => c.slug === slug);
+  return cat?.name || slug;
+}
+
+// Featured article (newest featured, or just newest)
+const featured = sorted.find(a => a.data.featured) || sorted[0];
+
+// Trending: next 4 articles after featured
+const trending = sorted.filter(a => a.slug !== featured?.slug).slice(0, 4);
+
+// Recommended reads: all articles for tab filtering
+const recommended = sorted.map(a => ({
+  title: a.data.title,
+  slug: a.slug,
+  category: getCategoryName(a.data.category),
+  categorySlug: a.data.category,
+  heroImage: a.data.heroImage,
+  heroAlt: a.data.heroAlt,
+}));
+
+// Wirecutter-specific data
+const wcFeatured = featured ? {
+  title: featured.data.title,
+  slug: featured.slug,
+  category: getCategoryName(featured.data.category),
+  categorySlug: featured.data.category,
+  heroImage: featured.data.heroImage,
+  heroAlt: featured.data.heroAlt,
+  description: featured.data.description,
+  date: featured.data.publishedDate,
+  author: (authors as Record<string, any>)[featured.data.author]?.name || featured.data.author,
+} : null;
+
+const wcLatest = sorted.filter(a => a.slug !== featured?.slug).slice(0, 6).map(a => ({
+  title: a.data.title,
+  slug: a.slug,
+  category: getCategoryName(a.data.category),
+  categorySlug: a.data.category,
+  heroImage: a.data.heroImage,
+  heroAlt: a.data.heroAlt,
+  date: a.data.publishedDate,
+}));
+
+const wcDeals = sorted.slice(0, 3).map(a => ({
+  title: a.data.title,
+  slug: a.slug,
+  category: getCategoryName(a.data.category),
+  categorySlug: a.data.category,
+  heroImage: a.data.heroImage,
+  heroAlt: a.data.heroAlt,
+}));
+
+// Group articles by category for Wirecutter sections
+const categoryGroups = categories
+  .map(cat => ({
+    name: cat.name,
+    slug: cat.slug,
+    articles: sorted
+      .filter(a => a.data.category === cat.slug)
+      .slice(0, 4)
+      .map(a => ({
+        title: a.data.title,
+        slug: a.slug,
+        category: cat.name,
+        categorySlug: cat.slug,
+        heroImage: a.data.heroImage,
+        heroAlt: a.data.heroAlt,
+        description: a.data.description,
+        date: a.data.publishedDate,
+        readingTime: a.data.readingTime,
+      })),
+  }))
+  .filter(g => g.articles.length > 0);
+---
+
+<BaseLayout title={siteConfig.name} description={siteConfig.tagline}>
+  <Header />
+
+  {isWirecutter ? (
+    <main>
+      <!-- Affiliate disclosure bar -->
+      <div class="wc-disclosure-bar">
+        <div class="container">
+          <p>{siteConfig.disclosureText} <a href="/affiliate-disclosure/">Learn more &rsaquo;</a></p>
+        </div>
+      </div>
+
+      <!-- Three-column hero -->
+      <div class="container">
+        {wcFeatured && (
+          <WirecutterHero
+            featured={wcFeatured}
+            latest={wcLatest}
+            deals={wcDeals}
+          />
+        )}
+      </div>
+
+      <!-- Category sections -->
+      <CategorySections categories={categoryGroups} />
+    </main>
+  ) : (
+    <>
+      <TrustBanner />
+      <main>
+        <!-- Hero + Trending -->
+        <section class="hero-section container">
+          <div class="hero-grid">
+            <div class="hero-main">
+              {featured && (
+                <FeaturedHero
+                  title={featured.data.title}
+                  slug={featured.slug}
+                  category={getCategoryName(featured.data.category)}
+                  categorySlug={featured.data.category}
+                  heroImage={featured.data.heroImage}
+                  heroAlt={featured.data.heroAlt}
+                  description={featured.data.description}
+                />
+              )}
+            </div>
+            <div class="hero-sidebar">
+              <TrendingSidebar items={trending.map(a => ({
+                title: a.data.title,
+                slug: a.slug,
+                category: getCategoryName(a.data.category),
+                categorySlug: a.data.category,
+                heroImage: a.data.heroImage,
+                heroAlt: a.data.heroAlt,
+              }))} />
+            </div>
+          </div>
+        </section>
+
+        <!-- Category Carousel -->
+        <CategoryCarousel />
+
+        <!-- Recommended Reads -->
+        <RecommendedReads articles={recommended} />
+      </main>
+    </>
+  )}
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  /* Healthline homepage styles */
+  .hero-section {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-xl);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  @media (min-width: 1025px) {
+    .hero-grid {
+      grid-template-columns: 3fr 1.2fr;
+    }
+  }
+
+  /* Wirecutter disclosure bar */
+  .wc-disclosure-bar {
+    background: var(--color-section-bg);
+    border-bottom: 1px solid var(--color-divider);
+    padding: var(--space-sm) 0;
+  }
+
+  .wc-disclosure-bar p {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0;
+    text-align: center;
+  }
+
+  .wc-disclosure-bar a {
+    color: var(--color-text-muted);
+    text-decoration: underline;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .wc-disclosure-bar a:hover {
+    color: var(--color-text);
+  }
+</style>

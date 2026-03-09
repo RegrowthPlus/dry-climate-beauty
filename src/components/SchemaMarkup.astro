@@ -1,0 +1,100 @@
+---
+import { siteConfig } from '../../site.config';
+
+interface Props {
+  type: 'BlogPosting' | 'BreadcrumbList' | 'Person' | 'Organization' | 'FAQPage';
+  data: Record<string, any>;
+}
+
+const { type, data } = Astro.props;
+const domain = siteConfig.domain;
+
+function buildBlogPosting(d: Record<string, any>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": d.title,
+    "image": d.heroImage ? [`${domain}${d.heroImage}`] : [],
+    "datePublished": d.publishedDate,
+    "dateModified": d.updatedDate || d.publishedDate,
+    "author": [{
+      "@type": "Person",
+      "name": d.authorName,
+      "url": `${domain}/authors/${d.authorSlug}/`,
+    }],
+    "publisher": {
+      "@type": "Organization",
+      "name": siteConfig.name,
+      "url": domain,
+    },
+    "description": d.description,
+    "mainEntityOfPage": `${domain}/${d.category}/${d.slug}/`,
+  };
+}
+
+function buildBreadcrumbList(d: Record<string, any>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": d.items.map((item: any, i: number) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "name": item.name,
+      ...(item.url ? { "item": `${domain}${item.url}` } : {}),
+    })),
+  };
+}
+
+function buildPerson(d: Record<string, any>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": d.name,
+    "jobTitle": d.title,
+    "description": d.bio,
+    "url": `${domain}/authors/${d.slug}/`,
+    ...(d.sameAs?.length ? { "sameAs": d.sameAs } : {}),
+  };
+}
+
+function buildOrganization(_d: Record<string, any>) {
+  const sameAs = Object.values(siteConfig.social).filter(Boolean);
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": siteConfig.name,
+    "url": domain,
+    "description": siteConfig.tagline,
+    ...(sameAs.length ? { "sameAs": sameAs } : {}),
+  };
+}
+
+function buildFAQPage(d: Record<string, any>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": (d.items || []).map((faq: any) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer,
+      },
+    })),
+  };
+}
+
+const builders: Record<string, (d: Record<string, any>) => any> = {
+  BlogPosting: buildBlogPosting,
+  BreadcrumbList: buildBreadcrumbList,
+  Person: buildPerson,
+  Organization: buildOrganization,
+  FAQPage: buildFAQPage,
+};
+
+const schema = builders[type]?.(data);
+---
+
+{schema && (
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+)}

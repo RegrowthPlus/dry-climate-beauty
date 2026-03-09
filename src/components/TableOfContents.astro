@@ -1,0 +1,176 @@
+---
+/**
+ * Auto-generated Table of Contents from article headings.
+ * Collapsible on mobile, always visible in desktop sidebar.
+ * Scroll spy highlights the current section.
+ */
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  headings: Heading[];
+}
+
+const { headings } = Astro.props;
+
+// Group H2s with nested H3 children
+interface GroupedHeading extends Heading {
+  children: Heading[];
+}
+
+const grouped: GroupedHeading[] = [];
+for (const heading of headings) {
+  if (heading.depth === 2) {
+    grouped.push({ ...heading, children: [] });
+  } else if (heading.depth === 3 && grouped.length > 0) {
+    grouped[grouped.length - 1].children.push(heading);
+  }
+}
+---
+
+{grouped.length > 0 && (
+  <nav class="toc" aria-label="Table of contents">
+    <button class="toc-toggle" aria-expanded="false">
+      <span>In this article</span>
+      <svg class="toc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <ul class="toc-list">
+      {grouped.map(h2 => (
+        <li>
+          <a href={`#${h2.slug}`}>{h2.text}</a>
+          {h2.children.length > 0 && (
+            <ul class="toc-sub">
+              {h2.children.map(h3 => (
+                <li><a href={`#${h3.slug}`}>{h3.text}</a></li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}
+
+<script>
+  // Mobile toggle
+  document.querySelectorAll('.toc-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      const list = btn.nextElementSibling as HTMLElement;
+      if (list) list.style.display = expanded ? 'none' : 'block';
+    });
+  });
+
+  // Scroll spy
+  const tocLinks = document.querySelectorAll('.toc-list a');
+  const headingEls = document.querySelectorAll('.article-content h2, .article-content h3');
+
+  if (headingEls.length > 0 && tocLinks.length > 0) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            tocLinks.forEach(link => {
+              link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+            });
+          }
+        }
+      },
+      { rootMargin: '0px 0px -80% 0px' }
+    );
+
+    headingEls.forEach(el => observer.observe(el));
+  }
+</script>
+
+<style>
+  .toc {
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-surface);
+    overflow: hidden;
+  }
+
+  .toc-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-text);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .toc-chevron {
+    transition: transform 0.2s;
+  }
+
+  .toc-toggle[aria-expanded="true"] .toc-chevron {
+    transform: rotate(180deg);
+  }
+
+  .toc-list {
+    display: none;
+    list-style: none;
+    padding: 0 1rem 0.75rem;
+    margin: 0;
+  }
+
+  .toc-list a {
+    display: block;
+    padding: 0.3rem 0 0.3rem 0.75rem;
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  .toc-list a:hover {
+    color: var(--color-primary);
+  }
+
+  .toc-list a.active {
+    color: var(--color-primary);
+    border-left-color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  .toc-sub {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc-sub a {
+    padding-left: 1.5rem;
+    font-size: 0.75rem;
+  }
+
+  @media (min-width: 1025px) {
+    .toc {
+      border: none;
+      border-radius: 0;
+      background: none;
+    }
+
+    .toc-toggle {
+      display: none;
+    }
+
+    .toc-list {
+      display: block;
+      padding: 0;
+    }
+  }
+</style>

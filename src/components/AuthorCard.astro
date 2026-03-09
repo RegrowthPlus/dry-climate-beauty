@@ -1,0 +1,84 @@
+---
+/**
+ * Compact author byline for article sidebar.
+ * Photo + "Written by Name on Date — Fact checked by Name, Credentials"
+ */
+import authors from '../data/authors.json';
+
+interface Props {
+  authorSlug: string;
+  publishedDate: Date;
+  reviewedBySlug?: string;
+}
+
+const { authorSlug, publishedDate, reviewedBySlug } = Astro.props;
+const author = (authors as Record<string, any>)[authorSlug];
+const reviewer = reviewedBySlug ? (authors as Record<string, any>)[reviewedBySlug] : null;
+const formattedDate = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' }).format(publishedDate);
+---
+
+{author && (
+  <div class="author-card">
+    <img
+      src={author.photo}
+      alt={author.name}
+      width="48"
+      height="48"
+      class="author-photo"
+      loading="lazy"
+    />
+    <div class="author-info">
+      <p>
+        Written by <a href={`/authors/${author.slug}/`}>{author.name}</a> on {formattedDate}
+      </p>
+      {reviewer && (
+        <p class="reviewer">
+          Fact checked by <a href={`/authors/${reviewer.slug}/`}>{reviewer.name}</a>, {reviewer.credentials}
+        </p>
+      )}
+    </div>
+  </div>
+)}
+
+<style>
+  .author-card {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+    padding-bottom: var(--space-lg);
+    border-bottom: 3px solid var(--color-primary);
+    margin-bottom: var(--space-xl);
+  }
+
+  .author-photo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .author-info {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--color-text-muted);
+  }
+
+  .author-info p {
+    margin: 0;
+  }
+
+  .author-info a {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .author-info a:hover {
+    text-decoration: underline;
+  }
+
+  .reviewer {
+    margin-top: 2px;
+  }
+</style>

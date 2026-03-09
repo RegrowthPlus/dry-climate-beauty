@@ -1,0 +1,154 @@
+---
+/**
+ * "Trending" sidebar widget: 4 stacked items with small square thumbnail + category + title.
+ * Matches Healthline screenshot 01 right sidebar.
+ */
+interface TrendingItem {
+  title: string;
+  slug: string;
+  category: string;
+  categorySlug: string;
+  heroImage: string;
+  heroAlt: string;
+}
+
+interface Props {
+  items: TrendingItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<aside class="trending-sidebar">
+  <div class="trending-header">
+    <svg class="trending-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+    <h2>Trending</h2>
+  </div>
+  <div class="trending-list">
+    {items.map((item) => (
+      <article class="trending-item">
+        <a href={`/${item.categorySlug}/${item.slug}/`} class="trending-thumb">
+          <img
+            src={item.heroImage}
+            alt={item.heroAlt}
+            width="80"
+            height="80"
+            loading="lazy"
+          />
+        </a>
+        <div class="trending-body">
+          <a href={`/${item.categorySlug}/`} class="category-label">{item.category}</a>
+          <h3>
+            <a href={`/${item.categorySlug}/${item.slug}/`}>{item.title}</a>
+          </h3>
+        </div>
+      </article>
+    ))}
+  </div>
+</aside>
+
+<style>
+  .trending-sidebar {
+    padding-left: var(--space-xl);
+    border-left: 1px solid var(--color-border);
+  }
+
+  .trending-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+  }
+
+  .trending-icon {
+    color: var(--color-primary);
+  }
+
+  .trending-header h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .trending-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .trending-item {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+  }
+
+  .trending-thumb {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 0.375rem;
+    overflow: hidden;
+  }
+
+  .trending-thumb img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+
+  .trending-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .category-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    text-decoration: none;
+    margin-bottom: 2px;
+  }
+
+  .trending-body h3 {
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .trending-body h3 a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .trending-body h3 a:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  @media (max-width: 1024px) {
+    .trending-sidebar {
+      padding-left: 0;
+      border-left: none;
+      border-top: 1px solid var(--color-border);
+      padding-top: var(--space-xl);
+      margin-top: var(--space-xl);
+    }
+
+    .trending-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .trending-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

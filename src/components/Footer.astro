@@ -1,0 +1,245 @@
+---
+import { siteConfig } from '../../site.config';
+
+const isWirecutter = siteConfig.variant === 'wirecutter';
+---
+
+<footer class:list={['site-footer', { 'wc-footer': isWirecutter }]}>
+  <div class="footer-inner container">
+    <!-- Top: Logo + Social -->
+    <div class="footer-top">
+      <a href="/" class="footer-logo">{siteConfig.name}</a>
+      <div class="footer-social">
+        {siteConfig.social.facebook && (
+          <a href={siteConfig.social.facebook} aria-label="Facebook" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        )}
+        {siteConfig.social.twitter && (
+          <a href={siteConfig.social.twitter} aria-label="X / Twitter" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        )}
+        {siteConfig.social.pinterest && (
+          <a href={siteConfig.social.pinterest} aria-label="Pinterest" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 0 0-4.373 23.178c-.07-.937-.134-2.375.028-3.398l1.163-4.927s-.297-.594-.297-1.471c0-1.378.799-2.407 1.793-2.407.846 0 1.254.635 1.254 1.396 0 .85-.541 2.122-.82 3.303-.233.987.495 1.791 1.467 1.791 1.762 0 3.115-1.858 3.115-4.539 0-2.373-1.705-4.032-4.14-4.032-2.82 0-4.475 2.115-4.475 4.302 0 .852.328 1.765.737 2.262a.3.3 0 0 1 .069.285l-.275 1.12c-.043.183-.144.222-.333.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.472 6.165 5.776 0 3.447-2.173 6.222-5.19 6.222-1.013 0-1.965-.527-2.291-1.148l-.623 2.378c-.226.869-.834 1.958-1.241 2.622A12 12 0 1 0 12 0z"/></svg>
+          </a>
+        )}
+      </div>
+    </div>
+
+    <!-- Middle: Newsletter + Nav -->
+    <div class="footer-middle">
+      <div class="footer-newsletter">
+        <h3>Get our wellness newsletter</h3>
+        <p>Evidence-based health insights delivered to your inbox weekly.</p>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" placeholder="Enter your email" required aria-label="Email address" />
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-nav-col">
+          <a href="/about/">About Us</a>
+          <a href="/editorial-standards/">Editorial Standards</a>
+          <a href="/privacy/">Privacy Policy</a>
+        </div>
+        <div class="footer-nav-col">
+          <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
+          <a href="/sitemap-index.xml">Sitemap</a>
+          <a href="/rss.xml">RSS Feed</a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Bottom: Copyright -->
+    <div class="footer-bottom">
+      <p>&copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
+      <p class="disclosure">{siteConfig.disclosureText}</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--color-footer-bg);
+    border-top: 1px solid var(--color-border);
+    padding: var(--space-3xl) 0 var(--space-xl);
+    margin-top: var(--space-3xl);
+  }
+
+  .footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-2xl);
+    padding-bottom: var(--space-xl);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .footer-logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-footer-text);
+    text-decoration: none;
+  }
+
+  .footer-social {
+    display: flex;
+    gap: var(--space-md);
+  }
+
+  .footer-social a {
+    color: var(--color-footer-muted);
+    transition: color 0.15s;
+  }
+
+  .footer-social a:hover {
+    color: var(--color-footer-text);
+  }
+
+  .footer-middle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    margin-bottom: var(--space-2xl);
+    padding-bottom: var(--space-xl);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .footer-newsletter h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-footer-text);
+    margin-bottom: var(--space-sm);
+  }
+
+  .footer-newsletter p {
+    color: var(--color-footer-muted);
+    font-size: 0.875rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .newsletter-form {
+    display: flex;
+    gap: 0;
+    max-width: 400px;
+  }
+
+  .newsletter-form input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    font-family: var(--font-body);
+    border: 1px solid var(--color-border);
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+  }
+
+  .newsletter-form input:focus {
+    border-color: var(--color-primary);
+  }
+
+  .newsletter-form button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  .newsletter-form button:hover {
+    background: var(--color-primary-dark);
+  }
+
+  .footer-nav {
+    display: flex;
+    gap: var(--space-3xl);
+  }
+
+  .footer-nav-col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .footer-nav a {
+    color: var(--color-footer-muted);
+    font-size: 0.875rem;
+    text-decoration: none;
+  }
+
+  .footer-nav a:hover {
+    color: var(--color-footer-text);
+    text-decoration: none;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    font-size: 0.8125rem;
+    color: var(--color-footer-muted);
+    margin-bottom: var(--space-xs);
+  }
+
+  .disclosure {
+    font-size: 0.75rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Wirecutter footer: navy bg, lighter borders */
+  .wc-footer {
+    border-top: none;
+  }
+
+  .wc-footer .footer-top {
+    border-bottom-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .wc-footer .footer-middle {
+    border-bottom-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .wc-footer .newsletter-form input {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+
+  .wc-footer .newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .wc-footer .mobile-nav-link {
+    border-bottom-color: rgba(255, 255, 255, 0.15);
+  }
+
+  @media (max-width: 768px) {
+    .footer-middle {
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+    }
+
+    .footer-nav {
+      gap: var(--space-xl);
+    }
+
+    .footer-top {
+      flex-direction: column;
+      gap: var(--space-md);
+      text-align: center;
+    }
+  }
+</style>

@@ -1,0 +1,75 @@
+---
+/**
+ * Scrolling trust signals bar below nav.
+ * Matches Healthline screenshot 01: teal background, white text, continuous scroll.
+ */
+import { siteConfig } from '../../site.config';
+
+const signals = siteConfig.trustSignals;
+// Duplicate for seamless infinite scroll
+const allSignals = [...signals, ...signals, ...signals];
+
+const iconPaths: Record<string, string> = {
+  search: '<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>',
+  award: '<circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>',
+  users: '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+  check: '<polyline points="20 6 9 17 4 12"/>',
+};
+---
+
+<div class="trust-banner">
+  <div class="trust-track">
+    {allSignals.map((signal) => (
+      <div class="trust-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <Fragment set:html={iconPaths[signal.icon] || iconPaths.check} />
+        </svg>
+        <span>{signal.text}</span>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .trust-banner {
+    background: var(--color-primary);
+    color: white;
+    overflow: hidden;
+    padding: 0.625rem 0;
+  }
+
+  .trust-track {
+    display: flex;
+    gap: 3rem;
+    white-space: nowrap;
+    animation: scroll 30s linear infinite;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+
+  .trust-item svg {
+    flex-shrink: 0;
+    opacity: 0.85;
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translateX(-33.33%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .trust-track {
+      animation: none;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+</style>

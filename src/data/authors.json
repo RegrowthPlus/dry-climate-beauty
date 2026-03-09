@@ -1,0 +1,28 @@
+{
+  "sarah-mitchell": {
+    "name": "Dr. Sarah Mitchell",
+    "slug": "sarah-mitchell",
+    "title": "Health Science Editor",
+    "photo": "/images/authors/sarah-mitchell.webp",
+    "bio": "Dr. Sarah Mitchell holds a Ph.D. in Dermatological Sciences and has spent over a decade researching the effects of environmental factors on hair and skin health. She specializes in mineral-related scalp conditions and water quality impacts on personal care. Her work has been cited in peer-reviewed trichology journals.",
+    "credentials": "Ph.D. Dermatological Sciences, Certified Trichology Researcher",
+    "expertise": ["Dermatological Sciences", "Trichology", "Water Quality & Hair Health"],
+    "isReviewer": true,
+    "social": {
+      "linkedin": ""
+    }
+  },
+  "james-walker": {
+    "name": "James Walker",
+    "slug": "james-walker",
+    "title": "Wellness & Nutrition Writer",
+    "photo": "/images/authors/james-walker.webp",
+    "bio": "James Walker is a health and wellness journalist with eight years of experience covering nutrition science, natural remedies, and evidence-based hair care. He focuses on translating complex research into practical guidance for everyday readers.",
+    "credentials": "B.Sc. Nutrition Science, Health Journalism Certificate",
+    "expertise": ["Nutrition Science", "Natural Remedies", "Hair Care"],
+    "isReviewer": false,
+    "social": {
+      "linkedin": ""
+    }
+  }
+}
