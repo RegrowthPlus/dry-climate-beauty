@@ -1,5 +1,5 @@
 ---
-title: "Hard Water's Effect on Your Skin Barrier (And Why Your Moisturiser Stopped Working)"
+title: "Hard Water and Your Skin Barrier: Why Your Moisturiser Stopped Working"
 description: "How mineral-heavy water disrupts your skin barrier function, and what to adjust in your routine to compensate."
 category: "skin-body"
 author: "emma-calloway"
