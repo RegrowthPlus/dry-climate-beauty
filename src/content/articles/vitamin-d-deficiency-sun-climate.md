@@ -1,5 +1,5 @@
 ---
-title: "Why Vitamin D Deficiency Is Counterintuitively Common in Sun-Heavy Climates"
+title: "Why Vitamin D Deficiency Is So Common in Sunny Climates"
 description: "You live under some of the strongest sun on earth, yet your vitamin D may be critically low. Here is why it happens and what the research recommends."
 category: "nutrition-supplements"
 author: "priya-mehta"
