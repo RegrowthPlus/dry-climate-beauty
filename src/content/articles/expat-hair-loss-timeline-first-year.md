@@ -1,5 +1,5 @@
 ---
-title: "The Expat Hair Loss Timeline: What Happens to Your Hair in the First Year"
+title: "The Expat Hair Loss Timeline: What Happens in Year One"
 description: "A month-by-month look at how relocating to a dry, hard water climate affects your hair, and what you can do at each stage to minimise damage."
 category: "hair-scalp"
 author: "emma-calloway"
