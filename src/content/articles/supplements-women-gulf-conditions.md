@@ -1,5 +1,5 @@
 ---
-title: "Supplement Stack for Women Living in Gulf Conditions: What Actually Helps"
+title: "Supplements for Women in Gulf Climates: What Actually Helps"
 description: "Not all supplements are worth your money. Here is what the evidence supports for women living in dry, hard water climates, and what is just marketing."
 category: "nutrition-supplements"
 author: "priya-mehta"
