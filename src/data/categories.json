@@ -1,44 +1,44 @@
-{
-  "hair-scalp": {
+[
+  {
     "name": "Hair & Scalp",
     "slug": "hair-scalp",
     "description": "Expat hair loss, hard water damage, curly hair care, and scalp health for women living in dry climates.",
     "icon": "/images/categories/hair-scalp.webp",
     "intro": "If you've moved to a dry, hard water climate and your hair has changed, you're not imagining it. This section covers the science of environmental hair damage, practical solutions for mineral buildup and scalp health, and honest guidance on what actually works when your usual routine stops delivering."
   },
-  "skin-body": {
+  {
     "name": "Skin & Body",
     "slug": "skin-body",
     "description": "Skin barrier repair, moisturiser guidance, sunscreen for extreme heat, and desalinated water effects on skin.",
     "icon": "/images/categories/skin-body.webp",
     "intro": "Dry climates, intense UV, and mineral-heavy water all take a toll on your skin barrier. Here you'll find evidence-based advice on protecting, repairing, and maintaining your skin in conditions that most product labels weren't designed for."
   },
-  "nutrition-supplements": {
+  {
     "name": "Nutrition & Supplements",
     "slug": "nutrition-supplements",
     "description": "Vitamin D, biotin, omega-3, collagen, and hydration science. What the research actually shows.",
     "icon": "/images/categories/nutrition-supplements.webp",
     "intro": "Supplement shelves are full of promises. We cut through the marketing with coverage grounded in peer-reviewed research. Every claim is sourced, weak evidence is flagged, and we always tell you when the answer is 'we don't know yet.'"
   },
-  "expat-wellness": {
+  {
     "name": "Expat Wellness",
     "slug": "expat-wellness",
     "description": "Stress, cortisol, climate adjustment, sleep, and the invisible health effects of relocating to a dry climate.",
     "icon": "/images/categories/expat-wellness.webp",
     "intro": "Relocating to a new climate affects more than your comfort level. Stress, sleep disruption, cortisol changes, and environmental adjustment all show up in your hair, skin, and energy. This section covers the connections your GP probably hasn't mentioned."
   },
-  "motherhood": {
+  {
     "name": "Motherhood",
     "slug": "motherhood",
     "description": "Postpartum hair loss, baby skincare in hard water, toddler routines, and honest advice for exhausted parents.",
     "icon": "/images/categories/motherhood.webp",
     "intro": "Having children in a hard water climate adds a layer of complexity that parenting books don't cover. From postpartum hair loss compounded by mineral buildup to baby skincare in water that irritates even adult skin, this section gives you practical, honest answers."
   },
-  "ingredient-reviews": {
+  {
     "name": "Ingredient Reviews",
     "slug": "ingredient-reviews",
     "description": "Chelating shampoos, clean beauty products, ingredient labels, and what actually works in harsh water conditions.",
     "icon": "/images/categories/ingredient-reviews.webp",
     "intro": "Not all ingredients perform the same in hard water conditions. We test and review products with an eye toward what actually works when mineral content is high, humidity is unpredictable, and water quality varies from tap to tap."
   }
-}
+]
