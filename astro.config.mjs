@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://gulfhealthscience.org',
+  site: 'https://dryclimatebeauty.com',
   output: 'static',
   trailingSlash: 'always',
   integrations: [
