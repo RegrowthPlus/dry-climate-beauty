@@ -1,26 +1,17 @@
 ---
-title: "Hard Water's Effect on Your Skin Barrier (And Why Your Moisturiser Stopped Working)"
-excerpt: "If your expensive moisturiser suddenly feels useless, hard water might be sabotaging your skin barrier. Here's the science behind mineral buildup and what actually works."
-author: Emma Calloway
-authorTitle: Editor-in-Chief
-date: "Mar 10, 2026"
-readTime: 8 min
-views: 0
-comments: 0
-category: Skin & Body
-heroImage: "/assets/images/hard-water-skin-barrier-hero.webp"
+title: "Hard Water's Effect on Your Skin Barrier"
+description: "If your expensive moisturiser suddenly feels useless, hard water might be sabotaging your skin barrier. Here's the science behind mineral buildup and fixes."
+category: "skin-body"
+author: "emma-calloway"
+publishedDate: 2026-03-10
+heroImage: "/images/articles/hard-water-skin-barrier-hero.webp"
 heroAlt: "Close-up of water droplets on human skin showing mineral residue and compromised skin texture"
+readingTime: 8
+tags: ["hard water", "skin barrier", "moisturiser", "chelation", "dry skin", "skincare routine"]
 featured: true
-datePublished: "2026-03-10"
-dateModified: "2026-03-10"
-images:
-  - src: "/assets/images/skin-barrier-damage-diagram.webp"
-    alt: "Scientific diagram showing healthy versus compromised skin barrier with mineral buildup"
-    caption: "How hard water minerals change the skin's protective barrier, preventing moisture retention and product absorption"
-  - src: "/assets/images/chelation-process-visualization.webp"
-    alt: "Visual representation of chelation process removing mineral deposits from skin surface"
-    caption: "Chelating agents bind to hard water minerals, allowing them to be rinsed away instead of building up on skin"
-faqs:
+hasAffiliateLinks: true
+reviewedBy: "dr-layla-hassan"
+faqItems:
   - question: "How long does it take to reverse hard water damage to skin?"
     answer: "With consistent use of chelating cleansers and barrier-repair products, most people notice significant improvement within 2-3 weeks. Your skin should feel less tight and products should absorb better within the first week. Complete barrier restoration typically takes 6-8 weeks because that's how long it takes for skin cells to complete their natural turnover cycle. However, if you continue washing with hard water without using chelating products, the mineral buildup will return and you'll be back to square one. The key is addressing both removal of existing deposits and prevention of new buildup."
   - question: "Can hard water cause acne or make existing acne worse?"
@@ -31,7 +22,6 @@ faqs:
     answer: "That tight feeling isn't your cleanser being too harsh. It's the mineral film forming on your skin as the water dries. When hard water evaporates, it leaves behind calcium and magnesium deposits that bind to the proteins in your skin cells, creating a subtle coating that pulls your skin taut as it dries. This happens even with the gentlest, most pH-balanced cleansers because the problem is the water, not the product. The sensation is your skin literally being covered in a thin layer of mineral salts. Switching to a chelating cleanser eliminates this feeling because it prevents the minerals from depositing in the first place, allowing your skin to dry naturally without that characteristic tightness."
   - question: "Is hard water worse for certain skin types?"
     answer: "Hard water affects all skin types, but people with pre-existing barrier dysfunction experience more severe problems. Those with eczema, rosacea, psoriasis, or naturally dry skin have compromised barriers to begin with, so the additional stress of mineral buildup and pH changeion triggers more dramatic flare-ups. Sensitive skin types also react more strongly to the inflammatory effects of hard water. Interestingly, even oily skin suffers: the mineral buildup triggers increased sebum production as your skin tries to compensate for the changeed barrier, leading to that simultaneously oily and dehydrated state that's so difficult to treat. Research shows that individuals with atopic dermatitis are particularly vulnerable, with hard water exposure increasing flare frequency by up to 40%."
-faqType: hardWater
 ---
 
 You've spent good money on that serum. The moisturiser came recommended by three different dermatologists. Yet somehow, your skin feels drier than it did before you started using anything at all. Here's what nobody tells you: the problem isn't your products. It's what's happening before they even touch your skin.
@@ -54,7 +44,7 @@ If you've noticed your skin becoming progressively drier despite religious moist
 
 • Skin barrier repair requires both removing mineral deposits and restoring the lipid layer with ceramide-rich products, a two-step process that most people miss
 
-![Scientific diagram showing healthy versus compromised skin barrier with mineral buildup](/assets/images/skin-barrier-damage-diagram.webp)
+![Scientific diagram showing healthy versus compromised skin barrier with mineral buildup](/images/articles/skin-barrier-damage-diagram.webp)
 *How hard water minerals change the skin's protective barrier, preventing moisture retention and product absorption*
 
 ## The Science Behind Hard Water and Skin Barrier Damage
@@ -77,7 +67,7 @@ A 2019 study from the University of Sheffield tracked 80 women using identical s
 
 This explains why your expensive ceramide cream worked beautifully when you were traveling but stopped delivering results once you got home. The formula didn't change. Your skin's ability to absorb it did. And no amount of layering or reapplying will fix a penetration problem caused by hard water buildup.
 
-![Visual representation of chelation process removing mineral deposits from skin surface](/assets/images/chelation-process-visualization.webp)
+![Visual representation of chelation process removing mineral deposits from skin surface](/images/articles/chelation-process-visualization.webp)
 *Chelating agents bind to hard water minerals, allowing them to be rinsed away instead of building up on skin*
 
 ## The Compounding Effect Nobody Warns You About
