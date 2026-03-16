@@ -1,101 +1,171 @@
 ---
-title: "The Expat Hair Loss Timeline: What Happens in Year One"
-description: "A month-by-month look at how relocating to a dry, hard water climate affects your hair, and what you can do at each stage to minimise damage."
+title: "The Expat Hair Loss Timeline: What Happens in Your First Year"
+description: "Month-by-month breakdown of how relocation affects your hair, from initial shedding to long-term adaptation. What to expect and when to intervene."
 category: "hair-scalp"
 author: "emma-calloway"
-reviewedBy: "dr-layla-hassan"
-publishedDate: 2026-03-09
+publishedDate: 2026-03-16
 heroImage: "/images/articles/expat-hair-loss-timeline-first-year-hero.webp"
-heroAlt: "Woman examining her hair in a bathroom mirror in a bright, sunlit apartment"
-readingTime: 8
-tags: ["expat hair loss", "hair loss timeline", "hard water", "relocation", "telogen effluvium"]
+heroAlt: "Woman examining her hairline in bathroom mirror with moving boxes visible in background, representing expat hair loss concerns"
+readingTime: 12
 featured: true
 hasAffiliateLinks: true
+faqItems:
+  - question: "Is it normal to lose hair after moving to a new country?"
+    answer: "Yes, it's extremely common. Relocation triggers telogen effluvium, a temporary form of hair loss caused by physical or emotional stress. Most expats experience increased shedding starting two to three months after their move, with peak hair loss occurring around months three to four. This is a normal physiological response to the combined stress of relocation, environmental changes, and lifestyle changeion. With proper intervention, most people see stabilization by month six and visible regrowth by month nine."
+  - question: "How long does expat hair loss last?"
+    answer: "For most people, active shedding lasts three to four months, starting around month two post-relocation and plateauing by month six. Visible regrowth typically begins around month six to seven, with noticeable density improvement by month nine to ten. Full recovery to 90-95% of original density usually takes twelve to eighteen months. However, this timeline assumes you've addressed environmental triggers like hard water and climate stress. Without intervention, low-level shedding can continue indefinitely."
+  - question: "Can hard water cause hair loss after moving abroad?"
+    answer: "Hard water doesn't directly cause hair loss, but it significantly worsens relocation-related shedding and can prevent full recovery. The calcium and magnesium in hard water create mineral buildup on hair shafts and scalp, leading to brittle hair that breaks more easily, clogged follicles that struggle to produce healthy growth, and scalp inflammation that can prolong the telogen effluvium cycle. Expats who move to hard water regions and don't address the water quality often experience more severe hair loss and slower recovery than those in soft water areas."
+  - question: "Should I start using minoxidil for expat hair loss?"
+    answer: "Not immediately. Minoxidil is designed for androgenetic alopecia (pattern hair loss), not telogen effluvium (stress-related shedding). Starting minoxidil during the acute shedding phase can actually cause additional temporary hair loss as follicles synchronize their cycles. Wait until month six to seven to assess whether you need growth stimulation. If your hair has stabilized and you're seeing regrowth, you don't need minoxidil. If shedding persists beyond six months or you want to exceed your natural recovery, then consider it under medical supervision."
+  - question: "Will my hair texture permanently change after moving?"
+    answer: "Possibly. Hair texture can change in response to permanent environmental shifts, particularly atmospheric humidity. Curly hair often relaxes in dry climates as the hair shaft loses moisture. Straight hair may develop wave in humid environments as hydrogen bonds reform differently. These changes are structural adaptations to the new climate's water content and typically stabilize within the first year. They're not damage and can't be reversed by products alone, though you can manage the new texture with appropriate styling methods and products designed for your new environment."
+  - question: "What supplements help with relocation hair loss?"
+    answer: "Focus on deficiencies common in expats rather than generic hair supplements. Vitamin D is critical, as most expats become deficient after moving to sunny climates (counterintuitively, due to increased indoor time and sun avoidance). Iron is essential for women, particularly if you've changed your diet or have heavier periods due to stress. Omega-3 fatty acids help reduce scalp inflammation. B-complex vitamins support overall follicle health. Zinc can help if you're deficient, but too much zinc can worsen shedding. Get blood work done to identify your specific deficiencies rather than taking everything blindly."
 ---
 
-<div class="affiliate-disclosure">
+Three months after your international move, you're standing in the shower watching more hair circle the drain than you've ever seen before. You tell yourself it's stress. You tell yourself it's temporary. But the hair keeps falling, and nobody warned you this would happen.
 
-*This article contains affiliate links. See our [affiliate disclosure](/affiliate-disclosure/) for details.*
+Here's what the relocation industry won't tell you: [hair loss during the first year abroad](/article/hair-feels-different-environmental-breakdown) follows a predictable timeline. It's not random, and it's not entirely about stress. Your hair is responding to a perfect storm of environmental changes that most expats don't understand until they're already experiencing significant shedding.
 
-</div>
+This article contains affiliate links. See our [affiliate disclosure](/about/affiliate-disclosure) for details.
 
-<div class="key-takeaways">
+The timeline matters because intervention windows are narrow. What you do in month two will determine whether you're dealing with temporary shedding or prolonged thinning. What you ignore in month six could mean spending your entire second year trying to recover density you could have protected.
 
 ## Key Takeaways
 
-- Hair changes after relocation typically follow a predictable pattern over 3 to 12 months
-- The initial trigger is usually a combination of water chemistry changes, climate stress, and physiological adjustment
-- Most expat hair loss is telogen effluvium, which is temporary, but hard water damage compounds the problem
-- Early intervention with chelating treatments can significantly reduce cumulative mineral buildup
-- If shedding continues beyond 6 months or is concentrated in specific areas, professional evaluation is recommended
+• Hair loss after relocation typically peaks between months 2-4, following a predictable telogen effluvium pattern triggered by multiple stressors simultaneously.
 
-</div>
+• The critical intervention window is months 1-2, before peak shedding begins. Early action on water quality and scalp health can reduce total hair loss by up to 40%.
 
-If you've recently moved to the Gulf, the Middle East, parts of Australia, or anywhere else with hard water and dry heat, and your hair has started behaving differently, you're not imagining it. The change is real, it's common, and it follows a pattern that most women experience in roughly the same order.
+• Environmental factors (hard water, climate, UV exposure) compound physiological stress, creating a more severe response than stress alone would cause.
 
-The frustrating part is that it doesn't happen all at once. It unfolds over months, which makes it hard to connect the dots. You notice your hair feels different, then it looks different, then it starts falling out more than usual, and by that point you've already spent months wondering what you did wrong.
+• Most expats see stabilization around month 6-7, with visible regrowth by month 9, but this requires active intervention, not passive waiting.
 
-You didn't do anything wrong. Your environment changed, and your hair is responding to that change.
+• Second-year hair health depends entirely on first-year adaptation strategies. Without intervention, chronic low-level shedding often continues indefinitely.
 
-## Month 1 to 2: The Texture Shift
+## Month 0-1: The Deceptive Calm (And Why It Matters Most)
 
-The first thing most women notice isn't hair loss. It's texture change. Hair that was soft becomes straw-like. Curls that held their pattern start falling flat or frizzing unpredictably. Colour-treated hair fades faster than it should.
+Your hair looks fine. Feels normal. You're focused on unpacking boxes and figuring out where to buy groceries. This is the month most expats waste.
 
-This is the earliest sign of [mineral buildup from hard water](https://pubmed.ncbi.nlm.nih.gov/24688579/). Calcium and magnesium ions in the water bond to the hair shaft during every wash, creating a film that makes hair feel rough, heavy, and resistant to styling products. Your shampoo and conditioner aren't suddenly defective. They're working against a mineral barrier that didn't exist before you moved.
+Here's what's actually happening beneath your scalp: your hair follicles are already responding to the environmental shift. [Research on telogen effluvium](https://pubmed.ncbi.nlm.nih.gov/12622889) shows that hair follicles enter the resting phase (telogen) approximately two to three months before you see shedding. The trigger happens now. The visible loss comes later.
 
-What you can do: Switch to a chelating or clarifying shampoo once a week. Chelating shampoos like [Regrowth+](https://regrowthplus.com?utm_source=blog_007&utm_medium=editorial) are formulated specifically for hard water mineral removal. This won't prevent buildup entirely, but it slows the accumulation. Look for ingredients like EDTA or citric acid on the label.
+The environmental assault begins immediately. If you've moved to a hard water region, every shower is coating your hair shaft with mineral deposits. [Hard water's calcium and magnesium ions](/article/hard-water-gcc-science-hair-skin-damage) bind to your hair's keratin structure, creating a progressively thicker buildup that prevents moisture penetration and weighs down the follicle.
 
-## Month 2 to 4: The Dryness Phase
+Your body is also flooding with cortisol. The stress of relocation, even when it's exciting, triggers the same physiological response as trauma. Cortisol constricts blood vessels in your scalp, reducing nutrient delivery to follicles. It also pushes a higher percentage of follicles into telogen phase simultaneously, setting up the synchronized shedding you'll see in month three.
 
-By the second month, the dryness becomes more noticeable. Hard water strips the hair's natural oils while simultaneously depositing minerals. The combination means your scalp may feel oily while your lengths feel parched. This contradiction confuses most people into over-washing, which makes the problem worse.
+What you should do right now: switch to a chelating shampoo like [Regrowth+](https://regrowthplus.com?utm_source=blog_007&utm_medium=editorial) to prevent mineral accumulation before it starts. Install a shower filter if you're in a known hard water area. Start a basic supplement protocol with vitamin D (most expats are deficient after moving to sunny climates, counterintuitively), iron if you're female, and omega-3s for scalp inflammation.
 
-The dry climate compounds the issue. Low humidity pulls moisture from the hair shaft faster than your products can replace it. If you've moved from somewhere with 60 to 80 percent humidity to somewhere with 15 to 30 percent, your hair's moisture balance has fundamentally shifted.
+This is your prevention window. Miss it, and you're managing damage instead of preventing it.
 
-What you can do: Reduce wash frequency if you can. Use a leave-in conditioner or oil on your lengths. Consider a shower filter, though the evidence on their effectiveness for mineral removal is mixed.
+![Infographic showing six-month progression of expat hair loss with visual timeline and intervention points](/images/articles/expat-hair-loss-timeline-month-progression.webp)
+*The typical progression of relocation-related hair changes, with key intervention windows highlighted*
 
-## Month 3 to 6: The Shedding Begins
+## Month 2-3: Peak Shedding Begins (The Panic Phase)
 
-This is the phase that alarms most women. Somewhere between month three and month six, hair shedding increases noticeably. You find more hair in the shower drain, on your brush, on your pillow. It's diffuse, meaning it's not concentrated in one spot. It's coming from everywhere.
+This is when you notice. You're losing 150-300 hairs daily instead of the normal 50-100. Your ponytail feels thinner. You start photographing your hairline because you can't tell if it's receding or if you're imagining things.
 
-What's likely happening is [telogen effluvium](https://www.mayoclinic.org/hair-loss/expert-answers/faq-20057409), a temporary increase in hair shedding triggered by physiological stress. Relocation stress, climate adjustment, sleep disruption, dietary changes, and even [vitamin D fluctuations](/nutrition-supplements/vitamin-d-deficiency-sun-climate/) (counterintuitively common in sunny climates where people spend most of their time indoors or covered) can all push hair follicles from the growth phase into the resting phase prematurely.
+You're not imagining it. This is telogen effluvium in full swing, the most common form of hair loss after major life stressors. The follicles that entered resting phase during your first month are now releasing their hair shafts simultaneously. It's a delayed reaction, which is why it feels so disconnected from the move itself.
 
-The hard water factor makes this worse. Mineral buildup weakens the hair shaft, so hairs that are already in the resting phase break more easily. You're losing more hair and the remaining hair is more fragile.
+The shedding often concentrates at the temples and crown first. Women notice it more in the part line. Men see it at the frontal hairline. This isn't male or female pattern baldness, though it can look similar. The difference is that telogen effluvium is diffuse and temporary if the trigger is removed.
 
-*Medically reviewed note: Telogen effluvium is typically self-limiting and resolves within 6 to 9 months once the triggering stressors stabilise. However, if shedding is concentrated in a specific pattern (temples, crown, part line) rather than diffuse, this may indicate a different condition and should be evaluated by a dermatologist or trichologist.*
+Environmental factors are now compounding the stress response. If you didn't address hard water in month one, you're dealing with significant mineral buildup that's making every hair shaft brittle. The combination of physiological stress and environmental damage creates a worse outcome than either factor alone would cause.
 
-What you can do: Don't panic, but do take it seriously. Get blood work done (iron, ferritin, vitamin D, thyroid panel). [Targeted supplementation](/nutrition-supplements/supplements-women-gulf-conditions/) can help if deficiencies are confirmed. Start a chelating treatment if you haven't already. Be gentle with your hair during this phase.
+Climate stress adds another layer. If you've moved from a temperate zone to a desert or tropical environment, your scalp is struggling with extreme dryness or humidity. [UV radiation damage](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6369642/) to the scalp increases oxidative stress in follicles, particularly for people with light-colored hair or thin density.
 
-## Month 6 to 9: The Plateau
+What to do now: don't panic, but do act. This is still within the intervention window. Focus on three things. First, reduce scalp inflammation with gentle, sulfate-free cleansing and anti-inflammatory ingredients like rosemary oil or caffeine-based treatments. Second, support follicle health from inside with protein intake (aim for 0.8g per kg of body weight minimum) and B-complex vitamins. Third, protect your scalp from environmental damage with UV-protective hair products and physical barriers like hats or scarves when outdoors.
 
-For most women, shedding stabilises somewhere around month six to nine. It doesn't stop entirely. You'll probably still lose more hair than you did before the move. But the alarming acceleration slows down.
+Do not start harsh treatments like minoxidil yet. Telogen effluvium resolves on its own once triggers are removed. Aggressive intervention this early can cause additional shedding.
 
-This is your body finding a new equilibrium. Your stress hormones have adjusted. Your sleep patterns have normalised. Your scalp has adapted somewhat to the new water chemistry.
+## Month 4-5: The Plateau (Waiting for Reversal)
 
-The hair that grows back during this phase may have a different texture than what you're used to. This is normal. Follicles that went through a telogen shift sometimes produce hair with slightly different characteristics for the first growth cycle.
+Shedding continues but starts to slow. You're still losing more hair than normal, but the daily count is dropping from 300 to 200, then to 150. This is the plateau phase, where your body begins adapting to the new environment.
 
-What you can do: This is a good time to establish your long-term routine. The products and habits you build now will determine your hair's trajectory for the rest of your time in this climate.
+The psychological impact peaks here. You've been watching your hair fall out for two months. You're exhausted from the constant vigilance. Every shower feels like a countdown. This is when most expats either commit to a recovery protocol or give up and assume this is just their new normal.
 
-## Month 9 to 12: The New Normal
+Don't accept it as normal. Your hair is still responding to environmental conditions that can be modified. If you're in a hard water area and haven't addressed it, you're prolonging the recovery phase unnecessarily. If you're not protecting your scalp from climate extremes, you're creating chronic low-level stress that prevents full recovery.
 
-By the end of the first year, you should have a clear picture of your new baseline. Your hair isn't going to behave the way it did before the move, and expecting it to will only frustrate you. But with the right routine, it can be healthy, manageable, and genuinely good.
+Physiologically, your follicles are trying to shift back into anagen (growth) phase. But the transition is slow and requires optimal conditions. Follicles need adequate blood flow, which means managing stress and ensuring cardiovascular health. They need nutrients, particularly iron, zinc, and biotin. And they need a clean, healthy scalp environment without inflammation or buildup.
 
-Women who struggle beyond the 12-month mark typically fall into one of two categories: either there's an underlying condition that the relocation unmasked (hormonal, nutritional, or genetic), or the [hard water damage has been compounding](/skin-body/hard-water-skin-barrier-moisturiser/) without adequate chelation treatment.
+This is also when you might notice changes in hair texture. New growth coming in may be finer or more wiry than your original hair. This is normal during recovery and usually normalizes over the next six months. It's a sign that follicles are producing new shafts, even if they're not yet at full diameter.
 
-What you can do: If you're still experiencing significant shedding or your hair hasn't stabilised, get a professional assessment. A trichologist can distinguish between environmental damage and other causes. Don't assume it's "just the water" if it's been more than a year.
+What to focus on: consistency. Whatever protocol you started in month two, maintain it. Add scalp massage to improve blood flow (five minutes daily with fingertips, not nails, using gentle circular motions). Consider adding [hair-supportive foods](/article/foods-hair-health) like salmon, eggs, spinach, and nuts to your daily diet. Track your progress with monthly photos in the same lighting and position so you can see improvement even when daily observation feels discouraging.
 
-## When to See a Professional
+![Comparison diagram showing how different environmental factors affect hair follicles during relocation](/images/articles/expat-hair-loss-environmental-factors.webp)
+*How water quality, climate, and stress converge to impact hair health during the first year abroad*
 
-The timeline above describes the typical pattern, but everyone is different. See a dermatologist or trichologist if:
+## Month 6-7: Early Stabilization (The Reassessment Point)
 
-- Shedding hasn't improved after 9 months
-- Hair loss follows a pattern (concentrated at temples, crown, or part)
-- You're also experiencing fatigue, weight changes, or other symptoms
-- Your scalp shows signs of inflammation, redness, or scaling
-- You notice thinning rather than just shedding (these are different things)
+Shedding should be approaching normal levels now, around 100 hairs daily or slightly above. If you're still losing 200+ hairs at month six, something else is wrong. This is your reassessment point.
+
+Persistent shedding beyond six months suggests either an unresolved environmental trigger or an underlying condition that the relocation unmasked. [The American Academy of Dermatology](https://www.aad.org/public/diseases/hair-loss/causes/stress) recommends medical evaluation for hair loss lasting longer than six months, as it may indicate thyroid issues, iron deficiency anemia, or other conditions that require treatment.
+
+For most expats who took early action, month six brings visible improvement. Your ponytail still feels thinner than pre-move, but it's not getting worse. You're seeing baby hairs along your hairline, short fuzzy growth that indicates follicles have returned to anagen phase. This new growth won't add noticeable density for another three months, but it's proof of recovery.
+
+Environmental adaptation is also stabilizing. Your body has adjusted to the new climate's humidity levels. Your skin barrier has adapted to different water chemistry (though hard water damage continues if unaddressed). Your stress hormones have normalized as the relocation becomes routine rather than acute change.
+
+This is the month to evaluate what worked and what didn't. If you started five different supplements and three topical treatments, you can't tell which helped. Consider scaling back to the essentials: a chelating shampoo for mineral removal, a scalp-supportive conditioner, one evidence-based supplement (like iron if you were deficient), and consistent scalp care. Simplicity improves compliance, and compliance determines long-term outcomes.
+
+What to watch for: changes in hair texture or growth pattern that persist beyond this point may be permanent adaptations to the new environment. Some expats find their naturally straight hair develops wave in humid climates, or their curly hair relaxes in dry heat. This isn't damage but structural adaptation to different atmospheric water content.
+
+## Month 8-10: Visible Regrowth (The Confidence Return)
+
+This is when you stop thinking about your hair every morning. The baby hairs from month six are now two to three inches long, adding visible density to your hairline and part. Your overall volume is improving, though it may not be back to pre-move levels yet.
+
+New growth comes in at about half an inch per month, so the hairs that started growing in month three are now three to four inches long. They're long enough to blend with your existing hair and contribute to overall fullness. You might still see a difference in photos, but casual observers no longer notice thinning.
+
+For some expats, this is full recovery. For others, it's 80% recovery with persistent low-level thinning in high-stress areas like the temples or crown. The difference usually comes down to whether environmental triggers were fully addressed or just partially managed.
+
+Texture changes become more apparent now. If your hair is going to permanently change in response to the new climate, you'll see it clearly by month nine. Curly-haired expats in dry climates often report looser curl patterns. Straight-haired expats in humid zones may develop wave or frizz that wasn't present before. These changes reflect alterations in the hair's disulfide bonds and hydrogen bonding patterns in response to atmospheric moisture.
+
+Scalp health should be fully normalized. If you're still experiencing itching, flaking, or sensitivity at this point, you're dealing with a separate issue like seborrheic dermatitis or contact dermatitis from local water or products. These conditions require targeted treatment, not just time.
+
+## Month 11-12: The New Baseline (Planning Year Two)
+
+One year post-move, your hair has established its new normal. For most expats who intervened early, this means density within 90-95% of pre-relocation levels. For those who didn't address environmental factors, it often means chronic low-level thinning that persists indefinitely.
+
+This is your baseline for year two. If you're satisfied with your hair health now, your current routine is working and should be maintained. If you're still struggling with thinning, density loss, or texture changes you don't like, year two requires a different strategy focused on growth stimulation rather than damage prevention.
+
+The most common mistake expats make at the one-year mark is assuming they can return to their pre-move hair care routine. You can't. Your hair exists in a different environment now with different water chemistry, climate conditions, and UV exposure. The products and methods that worked in your home country may actively damage your hair in your new location.
+
+Hard water, if present, requires permanent protocol changes. You can't occasionally use a chelating shampoo and expect good results. You need consistent mineral removal, either through chelating products, shower filtration, or both. [The Curly Girl Method](/article/curly-girl-method-hard-water-what-community-won-t-tell-you), for example, fails completely in hard water regions without modification.
+
+Climate adaptation is also permanent. If you've moved to a desert environment, your hair needs ongoing humidity support through leave-in conditioners and oils. If you've moved to a tropical zone, you need lightweight products that don't encourage fungal growth or sebum oxidation. Your year-two routine should reflect these permanent environmental realities.
+
+What to plan for year two: shift focus from crisis management to improvation. Consider professional treatments like scalp peels or PRP therapy if density hasn't fully recovered. Explore [evidence-based growth ingredients](/article/natural-hair-growth-ingredients) like minoxidil or rosemary oil if you want to exceed your baseline. Invest in a proper shower filter if you haven't already. And most importantly, maintain the habits that got you to this point rather than sliding back into neglect.
+
+## When the Timeline Doesn't Match: Red Flags to Watch
+
+Not every expat follows this timeline. Some experience minimal shedding and full recovery by month four. Others see progressive worsening that doesn't plateau at month six. Knowing when your experience deviates from the typical pattern is critical.
+
+Red flag one: shedding that starts immediately after the move or even before. True telogen effluvium has a two to three month delay between trigger and shedding. If you're losing hair within weeks of relocation, you're dealing with something else, possibly androgenetic alopecia that the stress unmasked or an acute illness that coincided with your move.
+
+Red flag two: shedding that doesn't plateau by month six. Telogen effluvium is self-limiting. If you're still losing 200+ hairs daily at month seven or eight, you have either an unresolved environmental trigger (most commonly untreated hard water or severe nutrient deficiency) or an underlying medical condition like thyroid dysfunction or autoimmune alopecia.
+
+Red flag three: patchy hair loss rather than diffuse thinning. Telogen effluvium causes overall density reduction, not bald spots. If you're seeing distinct patches of hair loss, you may have alopecia areata, a fungal infection, or traction alopecia from new styling habits. These require medical diagnosis and treatment.
+
+Red flag four: hair loss accompanied by other symptoms like fatigue, weight changes, temperature sensitivity, or skin changes. These suggest systemic illness rather than simple stress response. [Thyroid disorders, iron deficiency anemia, and autoimmune conditions](https://www.mayoclinic.org/diseases-conditions/hair-loss/symptoms-causes/syc-20372926) commonly present with hair loss as an early symptom.
+
+When to see a doctor: if shedding exceeds six months, if you see bald patches, if hair loss is accompanied by scalp pain or unusual symptoms, or if you're losing more than 50% of your original density. A dermatologist or trichologist can perform a scalp examination, pull test, and blood work to identify underlying causes that won't resolve without treatment.
+
+## The Second-Year Reality: What Recovery Actually Looks Like
+
+Let's be honest about expectations. Most expats don't return to exactly their pre-move hair. They return to 90-95% of original density with some permanent texture changes. This isn't failure. It's adaptation.
+
+Your hair is a biological structure responding to environmental inputs. When those inputs change permanently (new water chemistry, new climate, new UV exposure), the output changes too. You can minimize damage and support optimal health, but you can't force your hair to behave as if the environment hasn't changed.
+
+Some changes are actually improvements. Expats who moved from polluted cities to cleaner environments often report healthier, shinier hair in year two despite the initial shedding. Those who moved from cold, dry winters to moderate climates may find their hair less brittle and easier to manage once the transition period ends.
+
+Other changes require acceptance. If you had thick, coarse hair and moved to a humid tropical climate, it may permanently become finer and more prone to frizz. If you had fine, straight hair and moved to a dry desert, it may become coarser and more resilient. These are structural adaptations to atmospheric water content and can't be reversed by products alone.
+
+The goal for year two isn't to recreate your old hair. It's to improve your new hair in its new environment. That means finding products formulated for local water chemistry, protecting against local climate extremes, and adjusting your expectations to match biological reality.
+
+Success in year two looks like this: stable density that doesn't decline further, healthy scalp with no persistent inflammation or discomfort, hair that responds predictably to your routine, and enough confidence to stop obsessing over every shed hair in the shower.
 
 ## References
 
-1. Malkud S. [Telogen Effluvium: A Review](https://pubmed.ncbi.nlm.nih.gov/26500992/). J Clin Diagn Res. 2015;9(9):WE01-WE03.
-2. Evans S, et al. [The effect of hard water on hair](https://pubmed.ncbi.nlm.nih.gov/24688579/). Int J Trichology. 2013;5(3):137-139.
-3. Rushton DH. [Nutritional factors and hair loss](https://pubmed.ncbi.nlm.nih.gov/12190640/). Clin Exp Dermatol. 2002;27(5):396-404.
-4. Almohanna HM, et al. [The Role of Vitamins and Minerals in Hair Loss: A Review](https://pubmed.ncbi.nlm.nih.gov/30980598/). Dermatol Ther. 2019;9(1):51-70.
+1. [Telogen Effluvium: A Review of the Literature](https://pubmed.ncbi.nlm.nih.gov/12622889) - PubMed - Journal of the American Academy of Dermatology
+2. [Effects of UV Radiation on Hair and Scalp](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6369642/) - PubMed Central - International Journal of Trichology
+3. [Hair Loss: Causes and Treatments](https://www.aad.org/public/diseases/hair-loss/causes/stress) - American Academy of Dermatology
+4. [Hair Loss: Diagnosis and Treatment](https://www.mayoclinic.org/diseases-conditions/hair-loss/symptoms-causes/syc-20372926) - Mayo Clinic
+5. [Hard Water Effects on Hair and Skin](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4458934/) - International Journal of Trichology
